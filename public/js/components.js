@@ -19,18 +19,8 @@
   const headerHTML = `
     <header class="site-header" id="navbar">
       <div class="container nav-inner">
-        <a href="index.html" class="logo">
-          <div class="logo-icon">
-            <svg width="38" height="38" viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <circle cx="19" cy="19" r="19" fill="#E8F4FD"/>
-              <path d="M19 7C14.582 7 11 10.582 11 15C11 17.652 12.264 20.003 14.237 21.498L19 30L23.763 21.498C25.736 20.003 27 17.652 27 15C27 10.582 23.418 7 19 7Z" fill="#1B4F8A"/>
-              <circle cx="19" cy="15" r="3.5" fill="white"/>
-            </svg>
-          </div>
-          <div class="logo-text">
-            <span class="logo-name">Toomari</span>
-            <span class="logo-sub">Pediatrics</span>
-          </div>
+        <a href="index.html" class="logo logo-img" aria-label="Toomari Pediatrics — Home">
+          <img src="images/logo.png" srcset="images/logo.png 1x, images/logo@2x.png 2x" alt="Toomari Pediatrics" class="logo-image">
         </a>
         <nav class="desktop-nav" aria-label="Main navigation">
           <a href="index.html" class="nav-link${isActive('home')}">Home</a>
@@ -60,14 +50,8 @@
     <footer class="site-footer">
       <div class="container footer-grid">
         <div class="footer-brand">
-          <a href="index.html" class="logo logo-white">
-            <div class="logo-icon">
-              <svg width="36" height="36" viewBox="0 0 38 38" fill="none"><circle cx="19" cy="19" r="19" fill="rgba(255,255,255,0.12)"/><path d="M19 7C14.582 7 11 10.582 11 15C11 17.652 12.264 20.003 14.237 21.498L19 30L23.763 21.498C25.736 20.003 27 17.652 27 15C27 10.582 23.418 7 19 7Z" fill="white"/><circle cx="19" cy="15" r="3.5" fill="#1B4F8A"/></svg>
-            </div>
-            <div class="logo-text">
-              <span class="logo-name">Toomari</span>
-              <span class="logo-sub">Pediatrics</span>
-            </div>
+          <a href="index.html" class="logo logo-img logo-img-footer" aria-label="Toomari Pediatrics — Home">
+            <img src="images/logo.png" srcset="images/logo.png 1x, images/logo@2x.png 2x" alt="Toomari Pediatrics" class="logo-image">
           </a>
           <p class="footer-tagline">Compassionate pediatric care for every child, every stage — in the heart of Sherman Oaks.</p>
           <p class="footer-address">12345 Ventura Blvd, Suite 200<br>Sherman Oaks, CA 91423<br>(818) 555-0192</p>
