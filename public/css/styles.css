@@ -143,12 +143,12 @@ p { color: var(--text-muted); line-height: 1.7; }
   position: fixed;
   top: 0; left: 0; right: 0;
   z-index: 1000;
-  background: transparent;
-  transition: background var(--transition), box-shadow var(--transition), padding var(--transition);
-}
-.site-header.scrolled {
   background: white;
   box-shadow: var(--shadow-sm);
+  transition: box-shadow var(--transition);
+}
+.site-header.scrolled {
+  box-shadow: 0 4px 16px rgba(27,79,138,0.1);
 }
 
 .nav-inner {
@@ -174,10 +174,6 @@ p { color: var(--text-muted); line-height: 1.7; }
   width: auto;
   display: block;
   transition: filter var(--transition);
-}
-/* When over hero (transparent nav), give the dark text a soft drop-shadow for legibility */
-.site-header:not(.scrolled) .logo-image {
-  filter: drop-shadow(0 1px 2px rgba(0,0,0,0.25));
 }
 /* Footer logo: small white pill backdrop so colored logo reads on dark blue */
 .logo-img-footer {
@@ -207,20 +203,16 @@ p { color: var(--text-muted); line-height: 1.7; }
   font-family: var(--font-head);
   font-size: 1.15rem;
   font-weight: 900;
-  color: white;
-  transition: color var(--transition);
+  color: var(--blue);
 }
 .logo-sub {
   font-family: var(--font-head);
   font-size: 0.7rem;
   font-weight: 600;
-  color: rgba(255,255,255,0.75);
+  color: var(--text-muted);
   letter-spacing: 0.05em;
   text-transform: uppercase;
-  transition: color var(--transition);
 }
-.site-header.scrolled .logo-name { color: var(--blue); }
-.site-header.scrolled .logo-sub  { color: var(--text-muted); }
 
 /* Desktop nav links */
 .desktop-nav {
@@ -233,14 +225,12 @@ p { color: var(--text-muted); line-height: 1.7; }
   font-family: var(--font-head);
   font-weight: 600;
   font-size: 0.9rem;
-  color: rgba(255,255,255,0.9);
+  color: var(--text);
   padding: 8px 14px;
   border-radius: 8px;
   transition: all var(--transition);
 }
-.desktop-nav a:hover { color: white; background: rgba(255,255,255,0.12); }
-.site-header.scrolled .desktop-nav a { color: var(--text); }
-.site-header.scrolled .desktop-nav a:hover { color: var(--blue); background: var(--accent-bg); }
+.desktop-nav a:hover { color: var(--blue); background: var(--accent-bg); }
 
 /* Nav CTA */
 .nav-cta {
@@ -261,11 +251,10 @@ p { color: var(--text-muted); line-height: 1.7; }
   display: block;
   width: 24px;
   height: 2px;
-  background: white;
+  background: var(--text);
   border-radius: 2px;
   transition: all var(--transition);
 }
-.site-header.scrolled .hamburger span { background: var(--text); }
 .hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
 .hamburger.open span:nth-child(2) { opacity: 0; }
 .hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
@@ -827,8 +816,7 @@ p { color: var(--text-muted); line-height: 1.7; }
 /* ============================================================
    ACTIVE NAV LINK
    ============================================================ */
-.desktop-nav a.active { color: #FFD9B8; }
-.site-header.scrolled .desktop-nav a.active { color: var(--orange); }
+.desktop-nav a.active { color: var(--orange); }
 .mob-link.active { color: var(--orange); }
 
 
