@@ -1,0 +1,12 @@
+{
+  "name": "dr-toomari-demo",
+  "version": "1.0.0",
+  "description": "Toomari Pediatrics — Professional demo website with AI receptionist widget",
+  "private": true,
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.37.0"
+  }
+}
