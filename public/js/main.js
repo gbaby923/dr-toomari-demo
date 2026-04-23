@@ -57,7 +57,7 @@
 
   /* ---- SCROLL REVEAL ---- */
   const animatables = document.querySelectorAll(
-    '.service-card, .why-card, .insurance-item, .resource-card, .about-grid, .contact-grid'
+    '.service-card, .why-card, .insurance-item, .resource-card, .about-grid, .contact-grid, .testimonial-card, .step-card, .team-card, .faq-item, .emergency-card'
   );
   animatables.forEach(function (el) {
     el.classList.add('fade-up');
@@ -78,7 +78,7 @@
 
 
   /* ---- STAGGER CARDS ---- */
-  document.querySelectorAll('.services-grid, .why-grid, .insurance-grid, .resources-grid')
+  document.querySelectorAll('.services-grid, .why-grid, .insurance-grid, .resources-grid, .testimonials-grid, .team-grid, .steps-grid')
     .forEach(function (grid) {
       Array.from(grid.children).forEach(function (child, index) {
         child.style.transitionDelay = (index * 60) + 'ms';

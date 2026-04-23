@@ -13,58 +13,13 @@
 </head>
 <body>
 
-  <!-- ===== NAVIGATION ===== -->
-  <header class="site-header" id="navbar">
-    <div class="container nav-inner">
-      <a href="#home" class="logo">
-        <div class="logo-icon">
-          <svg width="38" height="38" viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <circle cx="19" cy="19" r="19" fill="#E8F4FD"/>
-            <path d="M19 7C14.582 7 11 10.582 11 15C11 17.652 12.264 20.003 14.237 21.498L19 30L23.763 21.498C25.736 20.003 27 17.652 27 15C27 10.582 23.418 7 19 7Z" fill="#1B4F8A"/>
-            <circle cx="19" cy="15" r="3.5" fill="white"/>
-          </svg>
-        </div>
-        <div class="logo-text">
-          <span class="logo-name">Toomari</span>
-          <span class="logo-sub">Pediatrics</span>
-        </div>
-      </a>
-
-      <nav class="desktop-nav" aria-label="Main navigation">
-        <a href="#home">Home</a>
-        <a href="#services">Services</a>
-        <a href="#about">About</a>
-        <a href="#patient-info">Patient Info</a>
-        <a href="#contact">Contact</a>
-      </nav>
-
-      <a href="#contact" class="btn btn-primary nav-cta">Book Appointment</a>
-
-      <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
-        <span></span><span></span><span></span>
-      </button>
-    </div>
-
-    <div class="mobile-nav" id="mobileNav" aria-hidden="true">
-      <a href="#home" class="mob-link">Home</a>
-      <a href="#services" class="mob-link">Services</a>
-      <a href="#about" class="mob-link">About</a>
-      <a href="#patient-info" class="mob-link">Patient Info</a>
-      <a href="#contact" class="mob-link">Contact</a>
-      <a href="#contact" class="btn btn-primary mob-book">Book an Appointment</a>
-    </div>
-  </header>
+  <!-- Shared header -->
+  <div id="site-header-mount"></div>
 
   <!-- ===== HERO ===== -->
   <section class="hero" id="home">
     <div class="hero-bg">
-      <img
-        src="https://images.unsplash.com/photo-1588776814546-1ffbb172e19c?auto=format&fit=crop&w=1600&q=80"
-        alt="Happy child at a pediatric visit"
-        class="hero-img"
-        loading="eager"
-        onerror="this.style.display='none'"
-      >
+      <img src="https://images.unsplash.com/photo-1588776814546-1ffbb172e19c?auto=format&fit=crop&w=1600&q=80" alt="Happy child at a pediatric visit" class="hero-img" loading="eager" onerror="this.style.display='none'">
       <div class="hero-overlay"></div>
     </div>
     <div class="container hero-content">
@@ -75,24 +30,15 @@
       <h1>Compassionate Care for<br>Every Child, Every Stage</h1>
       <p class="hero-sub">Dr. Tajav Toomari and our team are dedicated to the health and wellbeing of your child from newborn through adolescence.</p>
       <div class="hero-actions">
-        <a href="#contact" class="btn btn-primary btn-lg">Book an Appointment</a>
-        <a href="#about" class="btn btn-ghost btn-lg">Meet Dr. Toomari</a>
+        <a href="contact.html" class="btn btn-primary btn-lg">Book an Appointment</a>
+        <a href="about.html" class="btn btn-ghost btn-lg">Meet Dr. Toomari</a>
       </div>
       <div class="hero-stats">
-        <div class="hero-stat">
-          <strong>15+</strong>
-          <span>Years Experience</span>
-        </div>
+        <div class="hero-stat"><strong>15+</strong><span>Years Experience</span></div>
         <div class="hero-stat-divider"></div>
-        <div class="hero-stat">
-          <strong>5,000+</strong>
-          <span>Families Served</span>
-        </div>
+        <div class="hero-stat"><strong>5,000+</strong><span>Families Served</span></div>
         <div class="hero-stat-divider"></div>
-        <div class="hero-stat">
-          <strong>4.9 ★</strong>
-          <span>Patient Rating</span>
-        </div>
+        <div class="hero-stat"><strong>4.9 ★</strong><span>Patient Rating</span></div>
       </div>
     </div>
   </section>
@@ -122,94 +68,55 @@
     </div>
   </div>
 
-  <!-- ===== SERVICES ===== -->
-  <section class="services-section section" id="services">
+  <!-- ===== SERVICES PREVIEW ===== -->
+  <section class="services-section section">
     <div class="container">
       <div class="section-header">
         <span class="section-tag">What We Offer</span>
         <h2>Comprehensive Pediatric Services</h2>
         <p>From your baby's first checkup to sports physicals for teens — complete care for every stage of childhood.</p>
       </div>
-      <div class="services-grid">
-
+      <div class="services-grid services-grid-preview">
         <div class="service-card">
           <div class="service-icon blue-bg">
             <svg width="30" height="30" viewBox="0 0 24 24" fill="none"><path d="M20 7H4a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2z" stroke="#1B4F8A" stroke-width="1.5"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2M12 12v4M10 14h4" stroke="#1B4F8A" stroke-width="1.5" stroke-linecap="round"/></svg>
           </div>
-          <h3>Well-Child Visits &amp; Checkups</h3>
-          <p>Regular wellness exams to track your child's growth, development, and overall health at every age milestone.</p>
+          <h3>Well-Child Visits</h3>
+          <p>Regular wellness exams to track your child's growth, development, and overall health at every milestone.</p>
         </div>
-
         <div class="service-card">
           <div class="service-icon orange-bg">
             <svg width="30" height="30" viewBox="0 0 24 24" fill="none"><path d="M9 12h6M12 9v6" stroke="#F5821F" stroke-width="1.5" stroke-linecap="round"/><circle cx="12" cy="12" r="9" stroke="#F5821F" stroke-width="1.5"/></svg>
           </div>
           <h3>Sick Visits</h3>
-          <p>When illness strikes, we offer same-day appointments so your child gets the care they need — fast.</p>
+          <p>Same-day appointments when illness strikes, so your child gets the care they need — fast.</p>
         </div>
-
         <div class="service-card">
           <div class="service-icon blue-bg">
             <svg width="30" height="30" viewBox="0 0 24 24" fill="none"><path d="M19 3l-6 6-2-2-7 7 2 2 5-5 2 2 8-8-2-2z" stroke="#1B4F8A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
           </div>
-          <h3>Vaccinations &amp; Immunizations</h3>
-          <p>Complete immunization program following CDC guidelines, with parent education on what to expect.</p>
+          <h3>Vaccinations</h3>
+          <p>Complete immunizations following CDC guidelines, with parent education on what to expect.</p>
         </div>
-
         <div class="service-card">
           <div class="service-icon orange-bg">
-            <svg width="30" height="30" viewBox="0 0 24 24" fill="none"><path d="M12 2C8.134 2 5 5.134 5 9c0 3 1.5 5.5 4 7v4h6v-4c2.5-1.5 4-4 4-7 0-3.866-3.134-7-7-7z" stroke="#F5821F" stroke-width="1.5" stroke-linejoin="round"/><path d="M9 18h6" stroke="#F5821F" stroke-width="1.5" stroke-linecap="round"/></svg>
+            <svg width="30" height="30" viewBox="0 0 24 24" fill="none"><rect x="2" y="3" width="20" height="14" rx="3" stroke="#F5821F" stroke-width="1.5"/><path d="M8 21h8M12 17v4" stroke="#F5821F" stroke-width="1.5" stroke-linecap="round"/></svg>
           </div>
-          <h3>Newborn Care</h3>
-          <p>Gentle, expert care for your newest family member — starting with hospital visits through the first year.</p>
+          <h3>Telehealth</h3>
+          <p>Convenient video visits for follow-ups, minor concerns, and referrals — from the comfort of home.</p>
         </div>
-
-        <div class="service-card">
-          <div class="service-icon blue-bg">
-            <svg width="30" height="30" viewBox="0 0 24 24" fill="none"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" stroke="#1B4F8A" stroke-width="1.5" stroke-linejoin="round"/></svg>
-          </div>
-          <h3>Sports Physicals</h3>
-          <p>Pre-participation exams to clear your young athlete for sports — thorough, efficient, and affordable.</p>
-        </div>
-
-        <div class="service-card">
-          <div class="service-icon orange-bg">
-            <svg width="30" height="30" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="8" r="4" stroke="#F5821F" stroke-width="1.5"/><path d="M4 20c0-4 3.582-7 8-7s8 3 8 7" stroke="#F5821F" stroke-width="1.5" stroke-linecap="round"/><path d="M17 14l2 2 4-4" stroke="#F5821F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          </div>
-          <h3>Developmental Screenings</h3>
-          <p>Comprehensive assessments monitoring speech, motor skills, and cognitive development milestones.</p>
-        </div>
-
-        <div class="service-card">
-          <div class="service-icon blue-bg">
-            <svg width="30" height="30" viewBox="0 0 24 24" fill="none"><path d="M12 2C9 2 6.5 4.5 6.5 7.5c0 2.5 1.5 4.7 3.8 5.5L9 21h6l-1.3-8c2.3-.8 3.8-3 3.8-5.5C17.5 4.5 15 2 12 2z" stroke="#1B4F8A" stroke-width="1.5" stroke-linejoin="round"/></svg>
-          </div>
-          <h3>Behavioral &amp; Mental Health</h3>
-          <p>Caring support for ADHD, anxiety, behavioral concerns, and emotional wellbeing for children of all ages.</p>
-        </div>
-
-        <div class="service-card">
-          <div class="service-icon orange-bg">
-            <svg width="30" height="30" viewBox="0 0 24 24" fill="none"><rect x="2" y="3" width="20" height="14" rx="3" stroke="#F5821F" stroke-width="1.5"/><path d="M8 21h8M12 17v4" stroke="#F5821F" stroke-width="1.5" stroke-linecap="round"/><circle cx="9" cy="10" r="2" stroke="#F5821F" stroke-width="1.5"/><path d="M14 8h4M14 12h4" stroke="#F5821F" stroke-width="1.5" stroke-linecap="round"/></svg>
-          </div>
-          <h3>Telehealth Visits</h3>
-          <p>Convenient video appointments for follow-ups, minor concerns, and referrals — from the comfort of home.</p>
-        </div>
-
+      </div>
+      <div class="section-cta">
+        <a href="services.html" class="btn btn-outline btn-lg">View All Services →</a>
       </div>
     </div>
   </section>
 
-  <!-- ===== ABOUT ===== -->
-  <section class="about-section section" id="about">
+  <!-- ===== ABOUT PREVIEW ===== -->
+  <section class="about-section section">
     <div class="container about-grid">
       <div class="about-image-wrap">
-        <img
-          src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?auto=format&fit=crop&w=600&q=80"
-          alt="Dr. Tajav Toomari, Pediatrician"
-          class="about-photo"
-          onerror="this.src='https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&w=600&q=80'"
-        >
+        <img src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?auto=format&fit=crop&w=600&q=80" alt="Dr. Tajav Toomari, Pediatrician" class="about-photo" onerror="this.src='https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&w=600&q=80'">
         <div class="about-badge">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="#F5821F"><path d="M12 2l2.09 6.26L20.6 9.17l-5.28 4.77 1.64 7.06L12 17.27l-4.96 3.73 1.64-7.06L3.4 9.17l6.51-.91L12 2z"/></svg>
           Board-Certified Pediatrician
@@ -219,26 +126,9 @@
         <span class="section-tag">About Our Practice</span>
         <h2>Meet Dr. Tajav Toomari</h2>
         <p class="about-lead">With over 15 years of experience, Dr. Toomari has dedicated her career to providing compassionate, evidence-based care to the children of the San Fernando Valley.</p>
-        <p>Dr. Toomari completed her medical degree at UCLA and her pediatric residency at Children's Hospital Los Angeles. She is board-certified by the American Board of Pediatrics and is a fellow of the American Academy of Pediatrics.</p>
-        <p>Born and raised in Southern California, Dr. Toomari understands the diverse needs of our community. She is passionate about preventive care, early childhood development, and empowering families with the knowledge to help their children thrive.</p>
-        <div class="credentials">
-          <div class="credential">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" stroke="#1B4F8A" stroke-width="2" stroke-linecap="round"/><path d="M22 4L12 14.01l-3-3" stroke="#1B4F8A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            MD — UCLA School of Medicine
-          </div>
-          <div class="credential">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" stroke="#1B4F8A" stroke-width="2" stroke-linecap="round"/><path d="M22 4L12 14.01l-3-3" stroke="#1B4F8A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            Residency — Children's Hospital Los Angeles
-          </div>
-          <div class="credential">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" stroke="#1B4F8A" stroke-width="2" stroke-linecap="round"/><path d="M22 4L12 14.01l-3-3" stroke="#1B4F8A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            Board Certified — American Board of Pediatrics
-          </div>
-          <div class="credential">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" stroke="#1B4F8A" stroke-width="2" stroke-linecap="round"/><path d="M22 4L12 14.01l-3-3" stroke="#1B4F8A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            Fellow — American Academy of Pediatrics
-          </div>
-        </div>
+        <p>Dr. Toomari completed her medical degree at UCLA and her pediatric residency at Children's Hospital Los Angeles. She's board-certified by the American Board of Pediatrics and a fellow of the American Academy of Pediatrics.</p>
+        <p>Born and raised in Southern California, Dr. Toomari understands the diverse needs of our community. She's passionate about preventive care, early childhood development, and empowering families.</p>
+        <a href="about.html" class="btn btn-primary" style="margin-top:24px;">Learn More About Dr. Toomari</a>
       </div>
     </div>
   </section>
@@ -253,44 +143,32 @@
       </div>
       <div class="why-grid">
         <div class="why-card">
-          <div class="why-icon">
-            <svg width="26" height="26" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" stroke="#1B4F8A" stroke-width="1.5"/><path d="M12 6v6l4 2" stroke="#1B4F8A" stroke-width="1.5" stroke-linecap="round"/></svg>
-          </div>
+          <div class="why-icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" stroke="#1B4F8A" stroke-width="1.5"/><path d="M12 6v6l4 2" stroke="#1B4F8A" stroke-width="1.5" stroke-linecap="round"/></svg></div>
           <h3>Same-Day Sick Appointments</h3>
           <p>When your child is sick, you shouldn't wait days. We hold daily slots for urgent same-day sick visits.</p>
         </div>
         <div class="why-card">
-          <div class="why-icon">
-            <svg width="26" height="26" viewBox="0 0 24 24" fill="none"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v10z" stroke="#1B4F8A" stroke-width="1.5" stroke-linejoin="round"/></svg>
-          </div>
+          <div class="why-icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v10z" stroke="#1B4F8A" stroke-width="1.5" stroke-linejoin="round"/></svg></div>
           <h3>Bilingual Staff</h3>
           <p>Our entire team is fluent in English and Spanish, ensuring every family feels heard and understood.</p>
         </div>
         <div class="why-card">
-          <div class="why-icon">
-            <svg width="26" height="26" viewBox="0 0 24 24" fill="none"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" stroke="#1B4F8A" stroke-width="1.5"/><circle cx="9" cy="7" r="4" stroke="#1B4F8A" stroke-width="1.5"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75" stroke="#1B4F8A" stroke-width="1.5" stroke-linecap="round"/></svg>
-          </div>
+          <div class="why-icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" stroke="#1B4F8A" stroke-width="1.5"/><circle cx="9" cy="7" r="4" stroke="#1B4F8A" stroke-width="1.5"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75" stroke="#1B4F8A" stroke-width="1.5" stroke-linecap="round"/></svg></div>
           <h3>Accepting New Patients</h3>
           <p>We warmly welcome new families. Call or book online to establish your child with our practice.</p>
         </div>
         <div class="why-card">
-          <div class="why-icon">
-            <svg width="26" height="26" viewBox="0 0 24 24" fill="none"><rect x="2" y="5" width="20" height="14" rx="3" stroke="#1B4F8A" stroke-width="1.5"/><path d="M2 10h20" stroke="#1B4F8A" stroke-width="1.5"/><circle cx="7" cy="15" r="1" fill="#1B4F8A"/><circle cx="12" cy="15" r="1" fill="#1B4F8A"/><circle cx="17" cy="15" r="1" fill="#1B4F8A"/></svg>
-          </div>
+          <div class="why-icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none"><rect x="2" y="5" width="20" height="14" rx="3" stroke="#1B4F8A" stroke-width="1.5"/><path d="M2 10h20" stroke="#1B4F8A" stroke-width="1.5"/><circle cx="7" cy="15" r="1" fill="#1B4F8A"/><circle cx="12" cy="15" r="1" fill="#1B4F8A"/><circle cx="17" cy="15" r="1" fill="#1B4F8A"/></svg></div>
           <h3>Most Insurance Accepted</h3>
           <p>We partner with major commercial insurers, Medi-Cal, and offer transparent self-pay options.</p>
         </div>
         <div class="why-card">
-          <div class="why-icon">
-            <svg width="26" height="26" viewBox="0 0 24 24" fill="none"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.36 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.11 1.2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 21 16.92z" stroke="#1B4F8A" stroke-width="1.5" stroke-linejoin="round"/></svg>
-          </div>
+          <div class="why-icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.36 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.11 1.2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 21 16.92z" stroke="#1B4F8A" stroke-width="1.5" stroke-linejoin="round"/></svg></div>
           <h3>After-Hours Nurse Line</h3>
           <p>Concerned after hours? Our on-call nurse line is available 24/7 for urgent guidance and peace of mind.</p>
         </div>
         <div class="why-card">
-          <div class="why-icon">
-            <svg width="26" height="26" viewBox="0 0 24 24" fill="none"><rect x="2" y="3" width="20" height="14" rx="3" stroke="#1B4F8A" stroke-width="1.5"/><path d="M8 21h8M12 17v4" stroke="#1B4F8A" stroke-width="1.5" stroke-linecap="round"/></svg>
-          </div>
+          <div class="why-icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none"><rect x="2" y="3" width="20" height="14" rx="3" stroke="#1B4F8A" stroke-width="1.5"/><path d="M8 21h8M12 17v4" stroke="#1B4F8A" stroke-width="1.5" stroke-linecap="round"/></svg></div>
           <h3>Telehealth Available</h3>
           <p>Skip the drive for minor concerns. Our video visits bring expert pediatric care right to your home.</p>
         </div>
@@ -298,234 +176,70 @@
     </div>
   </section>
 
-  <!-- ===== INSURANCE ===== -->
-  <section class="insurance-section section">
+  <!-- ===== TESTIMONIALS ===== -->
+  <section class="testimonials-section section">
     <div class="container">
       <div class="section-header">
-        <span class="section-tag">Insurance &amp; Billing</span>
-        <h2>We Accept Most Major Insurance Plans</h2>
-        <p>Don't see your plan listed? Call us — we're constantly expanding our network of accepted insurers.</p>
+        <span class="section-tag">From Our Families</span>
+        <h2>Trusted by Parents Across the Valley</h2>
       </div>
-      <div class="insurance-grid">
-        <div class="insurance-item">Aetna</div>
-        <div class="insurance-item">Blue Cross Blue Shield</div>
-        <div class="insurance-item">Cigna</div>
-        <div class="insurance-item">United Healthcare</div>
-        <div class="insurance-item">Medi-Cal</div>
-        <div class="insurance-item">Kaiser Permanente</div>
-        <div class="insurance-item">Molina Healthcare</div>
-        <div class="insurance-item">L.A. Care</div>
-        <div class="insurance-item">Anthem</div>
-        <div class="insurance-item">Humana</div>
-        <div class="insurance-item">Health Net</div>
-        <div class="insurance-item">Blue Shield of CA</div>
-      </div>
-      <p class="insurance-note">We also offer competitive self-pay rates. <a href="#contact">Contact our billing department</a> for more information.</p>
-    </div>
-  </section>
-
-  <!-- ===== PATIENT RESOURCES ===== -->
-  <section class="resources-section section" id="patient-info">
-    <div class="container">
-      <div class="section-header">
-        <span class="section-tag">Patient Resources</span>
-        <h2>Everything You Need in One Place</h2>
-        <p>We make it easy to prepare for your visit and stay connected with your child's care team.</p>
-      </div>
-      <div class="resources-grid">
-        <a href="#" class="resource-card" onclick="return false;">
-          <div class="resource-icon">
-            <svg width="32" height="32" viewBox="0 0 24 24" fill="none"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" stroke="#1B4F8A" stroke-width="1.5" stroke-linejoin="round"/><path d="M14 2v6h6M16 13H8M16 17H8M10 9H8" stroke="#1B4F8A" stroke-width="1.5" stroke-linecap="round"/></svg>
-          </div>
-          <h3>New Patient Forms</h3>
-          <p>Download and complete your paperwork before your first visit to save time at check-in.</p>
-          <span class="resource-link">Download Forms →</span>
-        </a>
-        <a href="#" class="resource-card" onclick="return false;">
-          <div class="resource-icon">
-            <svg width="32" height="32" viewBox="0 0 24 24" fill="none"><rect x="2" y="2" width="20" height="20" rx="5" stroke="#1B4F8A" stroke-width="1.5"/><path d="M8 12h8M12 8v8" stroke="#1B4F8A" stroke-width="1.5" stroke-linecap="round"/></svg>
-          </div>
-          <h3>Patient Portal</h3>
-          <p>Access medical records, test results, vaccination history, and message our care team securely online.</p>
-          <span class="resource-link">Access Portal →</span>
-        </a>
-        <a href="#" class="resource-card" onclick="return false;">
-          <div class="resource-icon">
-            <svg width="32" height="32" viewBox="0 0 24 24" fill="none"><path d="M19 3l-6 6-2-2-7 7 2 2 5-5 2 2 8-8-2-2z" stroke="#1B4F8A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          </div>
-          <h3>Vaccine Schedule</h3>
-          <p>View the recommended childhood immunization schedule from birth through 18 years, per CDC guidelines.</p>
-          <span class="resource-link">View Schedule →</span>
-        </a>
-        <a href="#" class="resource-card" onclick="return false;">
-          <div class="resource-icon">
-            <svg width="32" height="32" viewBox="0 0 24 24" fill="none"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.36 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.11 1.2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 21 18.18z" stroke="#1B4F8A" stroke-width="1.5"/></svg>
-          </div>
-          <h3>After-Hours Instructions</h3>
-          <p>Know when to call our nurse line, visit urgent care, or go directly to the emergency room.</p>
-          <span class="resource-link">Read Guidelines →</span>
-        </a>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== CONTACT ===== -->
-  <section class="contact-section section" id="contact">
-    <div class="container contact-grid">
-      <div class="contact-info">
-        <span class="section-tag">Find Us</span>
-        <h2>Contact &amp; Office Hours</h2>
-        <div class="contact-detail">
-          <div class="contact-icon">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" stroke="#1B4F8A" stroke-width="1.5"/><circle cx="12" cy="10" r="3" stroke="#1B4F8A" stroke-width="1.5"/></svg>
-          </div>
-          <div>
-            <strong>Address</strong>
-            <p>12345 Ventura Blvd, Suite 200<br>Sherman Oaks, CA 91423</p>
-          </div>
-        </div>
-        <div class="contact-detail">
-          <div class="contact-icon">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.36 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.11 1.2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 21 16.92z" stroke="#1B4F8A" stroke-width="1.5"/></svg>
-          </div>
-          <div>
-            <strong>Phone</strong>
-            <p><a href="tel:+18185550192">(818) 555-0192</a></p>
-          </div>
-        </div>
-        <div class="contact-detail">
-          <div class="contact-icon">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" stroke="#1B4F8A" stroke-width="1.5"/><path d="M12 6v6l4 2" stroke="#1B4F8A" stroke-width="1.5" stroke-linecap="round"/></svg>
-          </div>
-          <div>
-            <strong>Office Hours</strong>
-            <p>Monday – Friday: 8:00 AM – 5:00 PM<br>Saturday: 9:00 AM – 1:00 PM<br>Sunday: Closed</p>
-          </div>
-        </div>
-        <div class="contact-actions">
-          <a href="tel:+18185550192" class="btn btn-primary">Call Our Office</a>
-          <a href="#" class="btn btn-outline" onclick="document.getElementById('chat-widget').querySelector('.widget-bubble').click(); return false;">Chat with Maya</a>
-        </div>
-      </div>
-      <div class="contact-map">
-        <div class="map-placeholder">
-          <svg width="56" height="56" viewBox="0 0 24 24" fill="none"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" stroke="#1B4F8A" stroke-width="1.5"/><circle cx="12" cy="10" r="3" stroke="#1B4F8A" stroke-width="1.5"/></svg>
-          <h4>Toomari Pediatrics</h4>
-          <p>12345 Ventura Blvd, Suite 200<br>Sherman Oaks, CA 91423</p>
-          <a href="https://maps.google.com/?q=12345+Ventura+Blvd+Sherman+Oaks+CA" target="_blank" rel="noopener" class="btn btn-outline btn-sm">Get Directions</a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== FOOTER ===== -->
-  <footer class="site-footer">
-    <div class="container footer-grid">
-      <div class="footer-brand">
-        <a href="#home" class="logo logo-white">
-          <div class="logo-icon">
-            <svg width="36" height="36" viewBox="0 0 38 38" fill="none"><circle cx="19" cy="19" r="19" fill="rgba(255,255,255,0.12)"/><path d="M19 7C14.582 7 11 10.582 11 15C11 17.652 12.264 20.003 14.237 21.498L19 30L23.763 21.498C25.736 20.003 27 17.652 27 15C27 10.582 23.418 7 19 7Z" fill="white"/><circle cx="19" cy="15" r="3.5" fill="#1B4F8A"/></svg>
-          </div>
-          <div class="logo-text">
-            <span class="logo-name">Toomari</span>
-            <span class="logo-sub">Pediatrics</span>
-          </div>
-        </a>
-        <p class="footer-tagline">Compassionate pediatric care for every child, every stage — in the heart of Sherman Oaks.</p>
-        <p class="footer-address">12345 Ventura Blvd, Suite 200<br>Sherman Oaks, CA 91423<br>(818) 555-0192</p>
-      </div>
-      <div class="footer-col">
-        <h4>Our Practice</h4>
-        <a href="#services">Our Services</a>
-        <a href="#about">About Dr. Toomari</a>
-        <a href="#patient-info">Patient Resources</a>
-        <a href="#contact">Contact &amp; Hours</a>
-      </div>
-      <div class="footer-col">
-        <h4>Patient Info</h4>
-        <a href="#">New Patient Forms</a>
-        <a href="#">Patient Portal</a>
-        <a href="#">Vaccine Schedule</a>
-        <a href="#">After-Hours Line</a>
-        <a href="#">Insurance &amp; Billing</a>
-      </div>
-      <div class="footer-col">
-        <h4>Get in Touch</h4>
-        <a href="tel:+18185550192">(818) 555-0192</a>
-        <a href="#contact">Book Appointment</a>
-        <a href="#">Patient Portal Login</a>
-        <a href="#">Telehealth Visit</a>
-      </div>
-    </div>
-    <div class="footer-bottom">
-      <div class="container footer-bottom-inner">
-        <p>&copy; 2024 Toomari Pediatrics. All rights reserved.</p>
-        <p class="footer-powered">Website by <a href="https://mountstudio.ai" target="_blank" rel="noopener">MOUNT Studio</a></p>
-      </div>
-    </div>
-  </footer>
-
-  <!-- ===== AI WIDGET ===== -->
-  <div id="chat-widget">
-    <button class="widget-bubble" id="widgetBubble" aria-label="Chat with Maya">
-      <svg class="bubble-icon-chat" width="28" height="28" viewBox="0 0 24 24" fill="none"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v10z" fill="white"/></svg>
-      <svg class="bubble-icon-close" width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M18 6L6 18M6 6l12 12" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
-    </button>
-
-    <div class="widget-panel" id="widgetPanel" aria-hidden="true">
-      <div class="widget-header">
-        <div class="widget-header-info">
-          <div class="widget-avatar">M</div>
-          <div>
-            <div class="widget-title">Toomari Pediatrics</div>
-            <div class="widget-status">
-              <span class="status-dot"></span>
-              Maya is online
+      <div class="testimonials-grid">
+        <div class="testimonial-card">
+          <div class="testimonial-stars">★★★★★</div>
+          <p>"Dr. Toomari is genuinely one of the kindest, most thorough doctors we've ever worked with. She actually listens. Our daughter looks forward to every visit."</p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">SM</div>
+            <div>
+              <strong>Sarah M.</strong>
+              <span>Mother of two, Sherman Oaks</span>
             </div>
           </div>
         </div>
-        <button class="widget-close" id="widgetClose" aria-label="Close chat">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M18 6L6 18M6 6l12 12" stroke="white" stroke-width="2" stroke-linecap="round"/></svg>
-        </button>
-      </div>
-
-      <div class="widget-messages" id="widgetMessages">
-        <div class="msg msg-bot">
-          <div class="msg-bubble">
-            Hi! I'm Maya, the virtual receptionist at Toomari Pediatrics. 👋<br><br>
-            How can I help you and your family today?
+        <div class="testimonial-card">
+          <div class="testimonial-stars">★★★★★</div>
+          <p>"We switched practices three times before finding Dr. Toomari. The same-day sick visits are a lifesaver, and the bilingual staff makes my parents feel at home."</p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">MR</div>
+            <div>
+              <strong>Maria R.</strong>
+              <span>Mother of three, Studio City</span>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <div class="testimonial-stars">★★★★★</div>
+          <p>"From newborn checkups to my teenager's sports physicals, Dr. Toomari has been with us every step. We can't imagine going anywhere else."</p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">JK</div>
+            <div>
+              <strong>James K.</strong>
+              <span>Father of two, Encino</span>
+            </div>
           </div>
         </div>
       </div>
+    </div>
+  </section>
 
-      <div class="quick-replies" id="quickReplies">
-        <button class="quick-reply" data-msg="Book an Appointment">📅 Book an Appointment</button>
-        <button class="quick-reply" data-msg="What are your office hours and location?">📍 Office Hours &amp; Location</button>
-        <button class="quick-reply" data-msg="What should I bring to my child's first appointment?">📋 What to Bring</button>
-        <button class="quick-reply" data-msg="I have questions about vaccinations">💉 Vaccination Questions</button>
-        <button class="quick-reply" data-msg="My child is sick — what should I do?">🤒 Sick Visit Info</button>
+  <!-- ===== CTA ===== -->
+  <section class="cta-section">
+    <div class="container cta-inner">
+      <div>
+        <h2>Ready to Meet Your Child's New Pediatrician?</h2>
+        <p>Book an appointment today, or chat with Maya — our virtual receptionist — for instant answers.</p>
       </div>
-
-      <div class="widget-input-area">
-        <input
-          type="text"
-          class="widget-input"
-          id="widgetInput"
-          placeholder="Type a message..."
-          autocomplete="off"
-          aria-label="Message"
-        >
-        <button class="widget-send" id="widgetSend" aria-label="Send message">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M22 2L11 13M22 2L15 22l-4-9-9-4 20-7z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        </button>
-      </div>
-
-      <div class="widget-footer">
-        Powered by <a href="https://mountstudio.ai" target="_blank" rel="noopener">MOUNT Studio</a>
+      <div class="cta-actions">
+        <a href="contact.html" class="btn btn-primary btn-lg">Book an Appointment</a>
+        <a href="tel:+18185550192" class="btn btn-ghost btn-lg">Call (818) 555-0192</a>
       </div>
     </div>
-  </div>
+  </section>
 
+  <!-- Shared footer + widget -->
+  <div id="site-footer-mount"></div>
+  <div id="chat-widget-mount"></div>
+
+  <script src="js/components.js"></script>
   <script src="js/main.js"></script>
   <script src="js/widget.js"></script>
 </body>

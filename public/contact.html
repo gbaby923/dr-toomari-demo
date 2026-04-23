@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact &amp; Book | Toomari Pediatrics</title>
+  <meta name="description" content="Contact Toomari Pediatrics in Sherman Oaks, CA. Office hours, location, phone number, and online appointment requests.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/widget.css">
+</head>
+<body>
+
+  <div id="site-header-mount"></div>
+
+  <!-- ===== PAGE BANNER ===== -->
+  <section class="page-banner">
+    <div class="container">
+      <span class="banner-tag">Get in Touch</span>
+      <h1>Contact &amp; Book an Appointment</h1>
+      <p>Reach our office, request an appointment, or chat with Maya for instant answers — we're here to help.</p>
+    </div>
+  </section>
+
+  <!-- ===== CONTACT INFO + MAP ===== -->
+  <section class="contact-section section" style="background:white;">
+    <div class="container contact-grid">
+      <div class="contact-info">
+        <span class="section-tag">Visit Us</span>
+        <h2>Office Information</h2>
+        <div class="contact-detail">
+          <div class="contact-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" stroke="#1B4F8A" stroke-width="1.5"/><circle cx="12" cy="10" r="3" stroke="#1B4F8A" stroke-width="1.5"/></svg></div>
+          <div>
+            <strong>Address</strong>
+            <p>12345 Ventura Blvd, Suite 200<br>Sherman Oaks, CA 91423</p>
+          </div>
+        </div>
+        <div class="contact-detail">
+          <div class="contact-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.36 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.11 1.2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 21 16.92z" stroke="#1B4F8A" stroke-width="1.5"/></svg></div>
+          <div>
+            <strong>Phone</strong>
+            <p><a href="tel:+18185550192">(818) 555-0192</a><br><span style="font-size:0.85rem;color:#9CA3AF;">After-hours nurse line: same number</span></p>
+          </div>
+        </div>
+        <div class="contact-detail">
+          <div class="contact-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" stroke="#1B4F8A" stroke-width="1.5"/><path d="M12 6v6l4 2" stroke="#1B4F8A" stroke-width="1.5" stroke-linecap="round"/></svg></div>
+          <div>
+            <strong>Office Hours</strong>
+            <p>Monday – Friday: 8:00 AM – 5:00 PM<br>Saturday: 9:00 AM – 1:00 PM<br>Sunday: Closed</p>
+          </div>
+        </div>
+        <div class="contact-actions">
+          <a href="tel:+18185550192" class="btn btn-primary">Call Our Office</a>
+          <a href="#" class="btn btn-outline" onclick="document.getElementById('widgetBubble').click(); return false;">Chat with Maya</a>
+        </div>
+      </div>
+      <div class="contact-map">
+        <div class="map-placeholder">
+          <svg width="56" height="56" viewBox="0 0 24 24" fill="none"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" stroke="#1B4F8A" stroke-width="1.5"/><circle cx="12" cy="10" r="3" stroke="#1B4F8A" stroke-width="1.5"/></svg>
+          <h4>Toomari Pediatrics</h4>
+          <p>12345 Ventura Blvd, Suite 200<br>Sherman Oaks, CA 91423</p>
+          <a href="https://maps.google.com/?q=12345+Ventura+Blvd+Sherman+Oaks+CA" target="_blank" rel="noopener" class="btn btn-outline btn-sm">Get Directions</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== APPOINTMENT FORM ===== -->
+  <section class="section" style="background:#F8FBFF;">
+    <div class="container" style="max-width: 720px;">
+      <div class="section-header">
+        <span class="section-tag">Book Online</span>
+        <h2>Request an Appointment</h2>
+        <p>Fill out the form and we'll confirm your appointment within 1 business day. Or chat with Maya for instant booking.</p>
+      </div>
+
+      <form class="appointment-form" id="apptForm" novalidate>
+        <div class="form-row">
+          <div class="form-field">
+            <label for="parentName">Parent / Guardian Name *</label>
+            <input type="text" id="parentName" name="parentName" required>
+          </div>
+          <div class="form-field">
+            <label for="phone">Phone Number *</label>
+            <input type="tel" id="phone" name="phone" required>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-field">
+            <label for="childName">Child's Name *</label>
+            <input type="text" id="childName" name="childName" required>
+          </div>
+          <div class="form-field">
+            <label for="childDob">Child's Date of Birth *</label>
+            <input type="date" id="childDob" name="childDob" required>
+          </div>
+        </div>
+        <div class="form-field">
+          <label for="email">Email (optional)</label>
+          <input type="email" id="email" name="email">
+        </div>
+        <div class="form-field">
+          <label for="visitType">Reason for Visit *</label>
+          <select id="visitType" name="visitType" required>
+            <option value="">Select a reason...</option>
+            <option>Well-Child Visit / Checkup</option>
+            <option>Sick Visit</option>
+            <option>Vaccinations</option>
+            <option>Newborn Care</option>
+            <option>Sports Physical</option>
+            <option>Behavioral / Mental Health</option>
+            <option>Telehealth Visit</option>
+            <option>New Patient Meet-and-Greet</option>
+            <option>Other</option>
+          </select>
+        </div>
+        <div class="form-field">
+          <label for="preferredTime">Preferred Day &amp; Time</label>
+          <input type="text" id="preferredTime" name="preferredTime" placeholder="e.g., Tuesday morning, or 'next week'">
+        </div>
+        <div class="form-field">
+          <label for="notes">Additional Notes (optional)</label>
+          <textarea id="notes" name="notes" rows="3" placeholder="Anything we should know ahead of the visit?"></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary btn-lg" style="width:100%;">Request Appointment</button>
+        <p class="form-disclaimer">By submitting this form, you agree we may contact you to confirm your appointment. This is a demo form — no real appointment is created.</p>
+      </form>
+
+      <div class="form-success" id="formSuccess">
+        <div class="success-icon">
+          <svg width="48" height="48" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" fill="#4ade80"/><path d="M8 12l3 3 5-6" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        <h3>Request Received!</h3>
+        <p>Thank you. Our team will confirm your appointment within 1 business day via phone or email.</p>
+        <p style="margin-top:12px;font-size:0.9rem;">Need to reach us sooner? <a href="tel:+18185550192" style="color:#1B4F8A;font-weight:600;">Call (818) 555-0192</a></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== EMERGENCY ===== -->
+  <section class="section" style="padding-top:0;padding-bottom:80px;">
+    <div class="container">
+      <div class="emergency-card">
+        <div class="emergency-icon">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z" stroke="#D96A0A" stroke-width="2" stroke-linejoin="round"/><path d="M12 9v4M12 17h.01" stroke="#D96A0A" stroke-width="2" stroke-linecap="round"/></svg>
+        </div>
+        <div>
+          <h3>For Medical Emergencies</h3>
+          <p>If your child is having difficulty breathing, severe injury, fever above 104°F, fever in a baby under 3 months, or any life-threatening situation — call <strong>911</strong> immediately or go to the nearest emergency room.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div id="site-footer-mount"></div>
+  <div id="chat-widget-mount"></div>
+
+  <script src="js/components.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/widget.js"></script>
+  <script>
+    // Demo form handler
+    document.getElementById('apptForm').addEventListener('submit', function (e) {
+      e.preventDefault();
+      const form = this;
+      const success = document.getElementById('formSuccess');
+      if (!form.checkValidity()) { form.reportValidity(); return; }
+      form.style.display = 'none';
+      success.classList.add('visible');
+      success.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    });
+  </script>
+</body>
+</html>
