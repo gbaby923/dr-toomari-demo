@@ -126,7 +126,7 @@
       }
 
       const data = await response.json();
-      const reply = data.content || "I'm sorry, I didn't get a response. Please try again or call our office at (818) 555-0192.";
+      const reply = data.content || "I'm sorry, I didn't get a response. Please try again or call our office at (818) 205-1666.";
 
       removeTyping();
       appendMessage(reply, 'bot');
@@ -135,7 +135,7 @@
     } catch (err) {
       removeTyping();
       appendMessage(
-        "I'm having trouble connecting right now. Please call our office directly at (818) 555-0192 — we're happy to help!",
+        "I'm having trouble connecting right now. Please call our office directly at (818) 205-1666 — we're happy to help!",
         'bot'
       );
     } finally {

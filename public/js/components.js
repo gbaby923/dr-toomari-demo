@@ -53,8 +53,16 @@
           <a href="index.html" class="logo logo-img logo-img-footer" aria-label="Toomari Pediatrics — Home">
             <img src="images/logo.png" srcset="images/logo.png 1x, images/logo@2x.png 2x" alt="Toomari Pediatrics" class="logo-image">
           </a>
-          <p class="footer-tagline">Compassionate pediatric care for every child, every stage — in the heart of Sherman Oaks.</p>
-          <p class="footer-address">12345 Ventura Blvd, Suite 200<br>Sherman Oaks, CA 91423<br>(818) 555-0192</p>
+          <p class="footer-tagline">Compassionate pediatric care for every child, every stage — serving families across the San Fernando Valley since 2009.</p>
+          <p class="footer-address">
+            <strong style="color:white;">Van Nuys</strong><br>
+            7100 Van Nuys Blvd #110<br>
+            Van Nuys, CA 91405<br><br>
+            <strong style="color:white;">Encino</strong><br>
+            16661 Ventura Blvd, Suite 504<br>
+            Encino, CA 91436<br><br>
+            <a href="tel:+18182051666" style="color:rgba(255,255,255,0.85);">(818) 205-1666</a>
+          </p>
         </div>
         <div class="footer-col">
           <h4>Our Practice</h4>
@@ -73,10 +81,11 @@
         </div>
         <div class="footer-col">
           <h4>Get in Touch</h4>
-          <a href="tel:+18185550192">(818) 555-0192</a>
+          <a href="tel:+18182051666">(818) 205-1666</a>
           <a href="contact.html">Book Appointment</a>
-          <a href="patient-info.html#portal">Patient Portal Login</a>
-          <a href="services.html#telehealth">Telehealth Visit</a>
+          <a href="contact.html#van-nuys">Van Nuys Office</a>
+          <a href="contact.html#encino">Encino Office</a>
+          <a href="patient-info.html#portal">Patient Portal</a>
         </div>
       </div>
       <div class="footer-bottom">
