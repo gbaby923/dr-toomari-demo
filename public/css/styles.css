@@ -460,16 +460,23 @@ p { color: var(--text-muted); line-height: 1.7; }
   box-shadow: var(--shadow-md);
 }
 .service-icon {
-  width: 60px;
-  height: 60px;
-  border-radius: 16px;
+  width: 80px;
+  height: 80px;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 20px;
+  margin-bottom: 18px;
+  transition: transform var(--transition);
 }
-.blue-bg   { background: var(--accent-bg); }
-.orange-bg { background: var(--orange-bg); }
+.service-icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+.service-card:hover .service-icon { transform: scale(1.05); }
+/* Legacy classes kept harmless (only svg-based cards would have used them) */
+.blue-bg, .orange-bg { background: transparent; }
 
 .service-card h3 {
   margin-bottom: 10px;
