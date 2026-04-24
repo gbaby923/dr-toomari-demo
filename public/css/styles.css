@@ -314,7 +314,7 @@ p { color: var(--text-muted); line-height: 1.7; }
   height: 100%;
   object-fit: cover;
   object-position: center top;
-  opacity: 0.4;
+  opacity: 0.3;
 }
 .hero-overlay {
   position: absolute;
