@@ -314,16 +314,16 @@ p { color: var(--text-muted); line-height: 1.7; }
   height: 100%;
   object-fit: cover;
   object-position: center top;
-  opacity: 0.3;
+  opacity: 0.8;
 }
 .hero-overlay {
   position: absolute;
   inset: 0;
   background: linear-gradient(
     135deg,
-    rgba(13,50,96,0.75) 0%,
-    rgba(27,79,138,0.5) 60%,
-    rgba(27,79,138,0.3) 100%
+    rgba(13,50,96,0.55) 0%,
+    rgba(27,79,138,0.35) 60%,
+    rgba(27,79,138,0.2) 100%
   );
 }
 .hero-content {
