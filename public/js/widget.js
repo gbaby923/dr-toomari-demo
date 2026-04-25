@@ -176,8 +176,22 @@
       const reply = data.content || "I'm sorry, I didn't get a response. Please try again or call our office at (818) 205-1666.";
 
       removeTyping();
-      appendMessage(reply, 'bot');
-      conversationHistory.push({ role: 'assistant', content: reply });
+      
+      let cleanReply = reply;
+      let showForm = false;
+      if (reply.includes('[SHOW_BOOKING_FORM]')) {
+        cleanReply = reply.replace('[SHOW_BOOKING_FORM]', '').trim();
+        showForm = true;
+      }
+
+      if (cleanReply) {
+        appendMessage(cleanReply, 'bot');
+      }
+      conversationHistory.push({ role: 'assistant', content: cleanReply });
+
+      if (showForm) {
+        appendInlineForm();
+      }
 
     } catch (err) {
       removeTyping();
@@ -190,6 +204,60 @@
       sendBtn.disabled = false;
       inputEl.focus();
     }
+  }
+
+  function appendInlineForm() {
+    const formId = 'inlineForm_' + Date.now();
+    const wrapper = document.createElement('div');
+    wrapper.className = 'chat-inline-form-wrapper';
+    wrapper.innerHTML = `
+      <div class="chat-inline-form">
+        <h4>Request an Appointment</h4>
+        <form id="${formId}">
+          <label>Parent/Guardian Name *</label>
+          <input type="text" required autocomplete="off">
+          
+          <label>Phone Number *</label>
+          <input type="tel" required autocomplete="off">
+          
+          <label>Reason for Visit *</label>
+          <select required>
+            <option value="">Select...</option>
+            <option>Well-Child Checkup</option>
+            <option>Sick Visit</option>
+            <option>Vaccinations</option>
+            <option>New Patient Visit</option>
+            <option>Other</option>
+          </select>
+          
+          <label>Preferred Location *</label>
+          <select required>
+            <option value="">Select...</option>
+            <option>Van Nuys</option>
+            <option>Encino</option>
+            <option>Either</option>
+          </select>
+          
+          <button type="submit" class="btn btn-primary">Submit Request</button>
+        </form>
+      </div>
+    `;
+    
+    messagesEl.appendChild(wrapper);
+    scrollToBottom();
+    
+    const formEl = document.getElementById(formId);
+    formEl.addEventListener('submit', function(e) {
+      e.preventDefault();
+      wrapper.innerHTML = `
+        <div class="chat-form-success">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" fill="#4ade80"/><path d="M8 12l3 3 5-6" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <h4 style="margin: 0 0 8px; color: #065f46; font-family: 'Nunito', sans-serif; font-weight: 800;">Request Received!</h4>
+          <p style="margin:0;">Thank you. Our team will contact you within 1 business day.</p>
+        </div>
+      `;
+      scrollToBottom();
+    });
   }
 
   sendBtn.addEventListener('click', function () { sendMessage(); });

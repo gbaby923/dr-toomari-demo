@@ -146,7 +146,8 @@
           </button>
         </div>
         <div class="widget-footer">
-          Powered by <a href="https://mountstudio.ai" target="_blank" rel="noopener">MOUNT Studio</a>
+          <span class="widget-disclaimer">Disclaimer: For general information only. Call 911 for emergencies. Please do not enter personal health information.</span>
+          <span>Powered by <a href="https://mountstudio.ai" target="_blank" rel="noopener">MOUNT Studio</a></span>
         </div>
       </div>
     </div>
