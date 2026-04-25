@@ -159,7 +159,8 @@
   z-index: 8999;
   width: 380px;
   max-width: calc(100vw - 32px);
-  max-height: min(500px, calc(100svh - 150px));
+  height: 600px;
+  max-height: calc(100vh - 120px);
   background: white;
   border-radius: 20px;
   box-shadow: 0 24px 80px rgba(0,0,0,0.18), 0 8px 24px rgba(27,79,138,0.12);
@@ -255,7 +256,6 @@
   flex-direction: column;
   gap: 10px;
   min-height: 0;
-  max-height: 260px;
   scroll-behavior: smooth;
 }
 .widget-messages::-webkit-scrollbar { width: 4px; }
