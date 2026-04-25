@@ -8,8 +8,8 @@
   bottom: 28px;
   right: 28px;
   z-index: 9000;
-  width: 72px;
-  height: 72px;
+  width: 80px;
+  height: 80px;
   border-radius: 50%;
   background: white;
   box-shadow: 0 8px 28px rgba(27,79,138,0.32);
@@ -19,7 +19,6 @@
   cursor: pointer;
   border: 3px solid white;
   padding: 0;
-  overflow: hidden;
   outline: none;
   transition: transform 0.25s ease, box-shadow 0.25s ease;
   animation: mayaWiggle 5s ease-in-out infinite;
@@ -47,6 +46,7 @@
   object-fit: cover;
   border-radius: 50%;
   display: block;
+  overflow: hidden;
   transition: opacity 0.25s ease, transform 0.25s ease;
 }
 .widget-bubble.open .maya-icon {
@@ -159,6 +159,7 @@
   z-index: 8999;
   width: 380px;
   max-width: calc(100vw - 32px);
+  max-height: calc(100svh - 116px);
   background: white;
   border-radius: 20px;
   box-shadow: 0 24px 80px rgba(0,0,0,0.18), 0 8px 24px rgba(27,79,138,0.12);
@@ -253,8 +254,7 @@
   display: flex;
   flex-direction: column;
   gap: 14px;
-  max-height: 340px;
-  min-height: 200px;
+  min-height: 0;
   scroll-behavior: smooth;
 }
 .widget-messages::-webkit-scrollbar { width: 4px; }
@@ -438,6 +438,8 @@
   .widget-bubble {
     bottom: 20px;
     right: 20px;
+    width: 72px;
+    height: 72px;
   }
   .widget-tooltip {
     bottom: 42px;
