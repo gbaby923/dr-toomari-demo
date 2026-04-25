@@ -265,16 +265,17 @@ p { color: var(--text-muted); line-height: 1.75; }
 .mobile-nav {
   display: none;
   flex-direction: column;
-  padding: 16px 24px 24px;
+  padding: 0 24px;
   background: white;
   border-top: 1px solid var(--border);
   box-shadow: var(--shadow-md);
   max-height: 0;
   overflow: hidden;
-  transition: max-height 0.35s ease;
+  transition: max-height 0.35s ease, padding 0.35s ease;
 }
 .mobile-nav.open {
   max-height: 500px;
+  padding: 16px 24px 24px;
 }
 .mob-link {
   font-family: var(--font-head);
@@ -1291,6 +1292,10 @@ p { color: var(--text-muted); line-height: 1.75; }
   .hamburger { display: flex; }
   .mobile-nav { display: flex; }
   .section    { padding: 80px 0; }
+
+  .hero { min-height: auto; }
+  .hero-img { object-position: 65% 20%; }
+  .hero-content { padding-top: 40px; padding-bottom: 60px; }
 
   .hero-content h1 { font-size: 2.25rem; }
   .hero-sub { font-size: 1.05rem; }
