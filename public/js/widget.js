@@ -12,15 +12,62 @@
   const inputEl      = document.getElementById('widgetInput');
   const sendBtn      = document.getElementById('widgetSend');
   const quickReplies = document.getElementById('quickReplies');
+  const tooltip      = document.getElementById('widgetTooltip');
+  const tooltipClose = document.getElementById('tooltipClose');
 
   let isOpen       = false;
   let isWaiting    = false;
   let conversationHistory = [];
+  let tooltipHideTimer = null;
+
+
+  /* ---- TOOLTIP / GREETING POPUP ---- */
+  function showTooltip() {
+    if (!tooltip || isOpen) return;
+    tooltip.classList.add('visible');
+    // Auto-hide after 8 seconds
+    tooltipHideTimer = setTimeout(hideTooltip, 8000);
+  }
+  function hideTooltip() {
+    if (!tooltip) return;
+    tooltip.classList.remove('visible');
+    if (tooltipHideTimer) {
+      clearTimeout(tooltipHideTimer);
+      tooltipHideTimer = null;
+    }
+  }
+  // Show once per session, 2.5s after page load
+  try {
+    if (!sessionStorage.getItem('mayaTooltipShown')) {
+      setTimeout(function () {
+        showTooltip();
+        try { sessionStorage.setItem('mayaTooltipShown', '1'); } catch (e) {}
+      }, 2500);
+    }
+  } catch (e) {
+    // sessionStorage unavailable — show anyway
+    setTimeout(showTooltip, 2500);
+  }
+  // Click tooltip body (not close button) opens widget
+  if (tooltip) {
+    tooltip.addEventListener('click', function (e) {
+      if (e.target.closest('.tooltip-close')) return;
+      hideTooltip();
+      openWidget();
+    });
+  }
+  if (tooltipClose) {
+    tooltipClose.addEventListener('click', function (e) {
+      e.stopPropagation();
+      hideTooltip();
+    });
+  }
 
 
   /* ---- OPEN / CLOSE ---- */
   function openWidget() {
     isOpen = true;
+    hideTooltip();
     panel.classList.add('open');
     panel.setAttribute('aria-hidden', 'false');
     bubble.classList.add('open');

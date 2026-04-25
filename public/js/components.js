@@ -101,9 +101,13 @@
   const widgetHTML = `
     <div id="chat-widget">
       <button class="widget-bubble" id="widgetBubble" aria-label="Chat with Maya">
-        <svg class="bubble-icon-chat" width="28" height="28" viewBox="0 0 24 24" fill="none"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v10z" fill="white"/></svg>
-        <svg class="bubble-icon-close" width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M18 6L6 18M6 6l12 12" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+        <img src="images/maya-icon.png" srcset="images/maya-icon.png 1x, images/maya-icon@2x.png 2x" alt="Maya" class="maya-icon">
+        <svg class="bubble-icon-close" width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M18 6L6 18M6 6l12 12" stroke="#1B4F8A" stroke-width="2.5" stroke-linecap="round"/></svg>
       </button>
+      <div class="widget-tooltip" id="widgetTooltip" role="status" aria-live="polite">
+        <button class="tooltip-close" id="tooltipClose" aria-label="Dismiss">&times;</button>
+        <span class="tooltip-text">👋 Hi! Can I help with anything?</span>
+      </div>
       <div class="widget-panel" id="widgetPanel" aria-hidden="true">
         <div class="widget-header">
           <div class="widget-header-info">
