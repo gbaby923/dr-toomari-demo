@@ -17,13 +17,13 @@
   --border:      #E5E7EB;
   --radius:      12px;
   --radius-lg:   20px;
-  --shadow-sm:   0 2px 8px rgba(27,79,138,0.08);
-  --shadow-md:   0 8px 32px rgba(27,79,138,0.12);
-  --shadow-lg:   0 20px 60px rgba(27,79,138,0.16);
+  --shadow-sm:   0 4px 12px rgba(27,79,138,0.06);
+  --shadow-md:   0 12px 36px rgba(27,79,138,0.1);
+  --shadow-lg:   0 24px 72px rgba(27,79,138,0.14);
   --font-head:   'Nunito', sans-serif;
   --font-body:   'Inter', sans-serif;
   --nav-height:  72px;
-  --transition:  0.25s ease;
+  --transition:  0.2s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* ---- RESET ---- */
@@ -43,12 +43,12 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 input { font-family: inherit; }
 
 /* ---- TYPOGRAPHY ---- */
-h1, h2, h3, h4 { font-family: var(--font-head); line-height: 1.2; }
-h1 { font-size: clamp(2rem, 5vw, 3.5rem); font-weight: 900; }
-h2 { font-size: clamp(1.75rem, 3.5vw, 2.5rem); font-weight: 800; }
-h3 { font-size: 1.15rem; font-weight: 700; }
-h4 { font-size: 1rem; font-weight: 700; }
-p { color: var(--text-muted); line-height: 1.7; }
+h1, h2, h3, h4 { font-family: var(--font-head); line-height: 1.15; letter-spacing: -0.02em; }
+h1 { font-size: clamp(2.25rem, 5vw, 3.75rem); font-weight: 900; }
+h2 { font-size: clamp(1.85rem, 3.5vw, 2.75rem); font-weight: 800; }
+h3 { font-size: 1.25rem; font-weight: 800; }
+h4 { font-size: 1.1rem; font-weight: 800; }
+p { color: var(--text-muted); line-height: 1.75; }
 
 /* ---- LAYOUT ---- */
 .container {
@@ -58,12 +58,12 @@ p { color: var(--text-muted); line-height: 1.7; }
   padding: 0 24px;
 }
 
-.section { padding: 100px 0; }
+.section { padding: 110px 0; }
 
 .section-header {
   text-align: center;
   max-width: 640px;
-  margin: 0 auto 56px;
+  margin: 0 auto 64px;
 }
 .section-header h2 { margin-bottom: 12px; }
 .section-header p { font-size: 1.05rem; }
@@ -89,8 +89,9 @@ p { color: var(--text-muted); line-height: 1.7; }
   justify-content: center;
   gap: 8px;
   font-family: var(--font-head);
-  font-weight: 700;
+  font-weight: 800;
   font-size: 0.95rem;
+  letter-spacing: 0.02em;
   padding: 12px 24px;
   border-radius: 100px;
   transition: all var(--transition);
@@ -100,15 +101,14 @@ p { color: var(--text-muted); line-height: 1.7; }
   border: 2px solid transparent;
 }
 .btn-primary {
-  background: var(--orange);
+  background: linear-gradient(135deg, var(--orange) 0%, var(--orange-dark) 100%);
   color: white;
-  border-color: var(--orange);
+  border-color: transparent;
+  box-shadow: 0 4px 14px rgba(245,130,31,0.25);
 }
 .btn-primary:hover {
-  background: var(--orange-dark);
-  border-color: var(--orange-dark);
-  transform: translateY(-1px);
-  box-shadow: 0 6px 20px rgba(245,130,31,0.35);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(245,130,31,0.4);
 }
 .btn-ghost {
   background: rgba(255,255,255,0.15);
@@ -120,7 +120,8 @@ p { color: var(--text-muted); line-height: 1.7; }
   background: white;
   color: var(--blue);
   border-color: white;
-  transform: translateY(-1px);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.1);
 }
 .btn-outline {
   background: transparent;
@@ -130,7 +131,8 @@ p { color: var(--text-muted); line-height: 1.7; }
 .btn-outline:hover {
   background: var(--blue);
   color: white;
-  transform: translateY(-1px);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(27,79,138,0.25);
 }
 .btn-lg { padding: 16px 32px; font-size: 1rem; }
 .btn-sm { padding: 9px 18px; font-size: 0.85rem; }
@@ -1288,12 +1290,12 @@ p { color: var(--text-muted); line-height: 1.7; }
   .desktop-nav, .nav-cta { display: none; }
   .hamburger { display: flex; }
   .mobile-nav { display: flex; }
-  .section    { padding: 72px 0; }
+  .section    { padding: 80px 0; }
 
-  .hero-content h1 { font-size: 2rem; }
-  .hero-sub { font-size: 1rem; }
-  .hero-actions { flex-direction: column; align-items: flex-start; }
-  .hero-stats { gap: 20px; }
+  .hero-content h1 { font-size: 2.25rem; }
+  .hero-sub { font-size: 1.05rem; }
+  .hero-actions { flex-direction: column; align-items: flex-start; gap: 12px; }
+  .hero-stats { gap: 24px; }
   .hero-stat strong { font-size: 1.6rem; }
   .hero-stat-divider { height: 32px; }
 
