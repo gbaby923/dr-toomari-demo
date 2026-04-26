@@ -940,6 +940,9 @@ p { color: var(--text-muted); line-height: 1.75; }
   padding: 32px 28px;
   box-shadow: var(--shadow-sm);
   border: 1px solid var(--border);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 }
 .testimonial-stars {
   color: #FBBF24;
@@ -953,6 +956,7 @@ p { color: var(--text-muted); line-height: 1.75; }
   line-height: 1.7;
   margin-bottom: 22px;
   font-style: italic;
+  flex-grow: 1;
 }
 .testimonial-author {
   display: flex;
