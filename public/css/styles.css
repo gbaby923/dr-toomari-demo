@@ -835,8 +835,8 @@ p { color: var(--text-muted); line-height: 1.75; }
    ============================================================ */
 .page-banner {
   position: relative;
-  background: #1B4F8A url('../images/backgrounds/blue-banner-bg.png') no-repeat center bottom / cover;
-  padding: calc(var(--nav-height) + 80px) 0 120px;
+  background: #1B4F8A url('../images/backgrounds/blue-banner-bg.png') no-repeat center 20% / cover;
+  padding: calc(var(--nav-height) + 80px) 0 80px;
   text-align: center;
   color: white;
   overflow: hidden;
@@ -1313,7 +1313,7 @@ p { color: var(--text-muted); line-height: 1.75; }
   .footer-grid { grid-template-columns: 1fr; gap: 32px; }
   .footer-bottom-inner { flex-direction: column; text-align: center; }
 
-  .page-banner { padding: calc(var(--nav-height) + 56px) 0 90px; }
+  .page-banner { padding: calc(var(--nav-height) + 56px) 0 56px; }
   .form-row { grid-template-columns: 1fr; gap: 0; }
   .appointment-form { padding: 24px; }
   .emergency-card { flex-direction: column; gap: 16px; padding: 24px; }
