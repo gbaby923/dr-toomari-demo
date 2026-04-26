@@ -1581,20 +1581,12 @@ p { color: var(--text-muted); line-height: 1.75; }
    ============================================================ */
 .services-hero-distinct {
   position: relative;
-  background: linear-gradient(135deg, #E8F4FD 0%, #FFFFFF 100%);
+  background: #E8F4FD url('../images/backgrounds/background2.png') no-repeat center bottom / cover;
   padding: calc(var(--nav-height) + 80px) 0 240px;
   color: var(--text);
   text-align: center;
   overflow: hidden;
 }
-.sh-shape {
-  position: absolute;
-  border-radius: 50%;
-  background: rgba(27, 79, 138, 0.03);
-  z-index: 0;
-}
-.sh-shape-1 { width: 300px; height: 300px; top: -50px; left: -100px; }
-.sh-shape-2 { width: 400px; height: 400px; bottom: 50px; right: -150px; background: rgba(245, 130, 31, 0.03); }
 
 .services-hero-distinct .container {
   position: relative;
