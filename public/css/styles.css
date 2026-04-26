@@ -1264,6 +1264,159 @@ p { color: var(--text-muted); line-height: 1.75; }
 
 
 /* ============================================================
+   PATIENT INFO REDESIGN
+   ============================================================ */
+.patient-hero {
+  position: relative;
+  background: #1B4F8A url('../images/backgrounds/blue-banner-bg.png') no-repeat center bottom / cover;
+  padding: calc(var(--nav-height) + 80px) 0 160px;
+  color: white;
+  overflow: hidden;
+}
+.patient-hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(13, 50, 96, 0.25);
+  pointer-events: none;
+}
+.patient-hero .container {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 64px;
+  align-items: center;
+}
+.patient-hero-content { max-width: 540px; }
+.patient-hero-tag {
+  display: inline-block;
+  background: rgba(255,255,255,0.15);
+  border: 1px solid rgba(255,255,255,0.25);
+  backdrop-filter: blur(8px);
+  color: white;
+  font-family: var(--font-head);
+  font-weight: 700;
+  font-size: 0.78rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 6px 14px;
+  border-radius: 100px;
+  margin-bottom: 20px;
+}
+.patient-hero h1 {
+  font-size: clamp(2.5rem, 4vw, 3.5rem);
+  line-height: 1.15;
+  margin-bottom: 20px;
+  color: white;
+}
+.patient-hero p {
+  font-size: 1.1rem;
+  color: rgba(255,255,255,0.85);
+  margin-bottom: 32px;
+  line-height: 1.6;
+}
+.patient-hero-actions {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+.patient-hero-actions .btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* Hero Cards Grid */
+.hero-cards-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+.resource-card {
+  background: white;
+  border-radius: 16px;
+  padding: 24px;
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  text-decoration: none;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.3s ease;
+  position: relative;
+}
+.resource-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 14px 40px rgba(0,0,0,0.15);
+}
+.rc-icon-wrap {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+.rc-icon-wrap svg { width: 28px; height: 28px; }
+.rc-icon-blue { background: #E0F2FE; color: #0284C7; }
+.rc-icon-green { background: #DCFCE7; color: #16A34A; }
+.rc-icon-purple { background: #F3E8FF; color: #9333EA; }
+.rc-icon-orange { background: #FFEDD5; color: #EA580C; }
+
+.rc-content { flex: 1; }
+.rc-content h3 {
+  font-family: var(--font-head);
+  font-size: 1.05rem;
+  color: #111827;
+  margin-bottom: 4px;
+}
+.rc-content p {
+  font-size: 0.85rem;
+  color: #6B7280;
+  line-height: 1.4;
+  margin: 0;
+}
+.rc-arrow {
+  color: #9CA3AF;
+  font-size: 1.2rem;
+  transition: transform 0.3s ease, color 0.3s ease;
+  align-self: center;
+}
+.resource-card:hover .rc-arrow {
+  transform: translateX(4px);
+  color: var(--blue);
+}
+
+/* Resources Section Below */
+.resources-section {
+  padding: 80px 0;
+  background: white;
+}
+.resources-grid-4 {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  margin-top: 48px;
+}
+.resources-grid-4 .resource-card {
+  box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+  border: 1px solid #F3F4F6;
+  flex-direction: column;
+  align-items: flex-start;
+  height: 100%;
+}
+.resources-grid-4 .resource-card:hover {
+  box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+}
+.resources-grid-4 .rc-arrow {
+  position: absolute;
+  bottom: 24px;
+  right: 24px;
+}
+
+
+/* ============================================================
    RESPONSIVE
    ============================================================ */
 @media (max-width: 1024px) {
@@ -1274,6 +1427,8 @@ p { color: var(--text-muted); line-height: 1.75; }
   .team-grid            { grid-template-columns: repeat(2, 1fr); }
   .why-grid-4           { grid-template-columns: repeat(2, 1fr); }
   .steps-grid           { grid-template-columns: repeat(2, 1fr); }
+  .patient-hero .container { gap: 32px; }
+  .hero-cards-grid      { grid-template-columns: 1fr; }
 }
 
 @media (max-width: 900px) {
@@ -1283,6 +1438,10 @@ p { color: var(--text-muted); line-height: 1.75; }
   .why-grid       { grid-template-columns: repeat(2, 1fr); }
   .insurance-grid { grid-template-columns: repeat(3, 1fr); }
   .cta-inner      { flex-direction: column; text-align: center; align-items: center; }
+  .patient-hero .container { grid-template-columns: 1fr; text-align: center; }
+  .patient-hero-content { margin: 0 auto; }
+  .patient-hero-actions { justify-content: center; }
+  .resources-grid-4 { grid-template-columns: repeat(2, 1fr); }
 }
 
 @media (max-width: 768px) {
@@ -1319,6 +1478,8 @@ p { color: var(--text-muted); line-height: 1.75; }
   .emergency-card { flex-direction: column; gap: 16px; padding: 24px; }
   .cta-actions { flex-direction: column; width: 100%; }
   .cta-actions .btn { width: 100%; }
+  .patient-hero { padding: calc(var(--nav-height) + 40px) 0 100px; }
+  .patient-hero h1 { font-size: 2rem; }
 }
 
 @media (max-width: 520px) {
@@ -1333,4 +1494,5 @@ p { color: var(--text-muted); line-height: 1.75; }
   .section-header { margin-bottom: 36px; }
   .faq-item summary { padding: 16px 18px; font-size: 0.95rem; }
   .faq-answer { padding: 0 18px 16px; }
+  .resources-grid-4 { grid-template-columns: 1fr; }
 }

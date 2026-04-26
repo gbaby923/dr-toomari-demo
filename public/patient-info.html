@@ -18,46 +18,112 @@
 
   <div id="site-header-mount"></div>
 
-  <!-- ===== PAGE BANNER ===== -->
-  <section class="page-banner">
+  <!-- ===== PATIENT HERO ===== -->
+  <section class="patient-hero">
     <div class="container">
-      <span class="banner-tag">Patient Information</span>
-      <h1>Everything You Need, in One Place</h1>
-      <p>Forms, schedules, insurance details, and answers to the questions parents ask most.</p>
+      <div class="patient-hero-content">
+        <span class="patient-hero-tag">Patient Information</span>
+        <h1>Everything Parents Need Before Their Visit</h1>
+        <p>Find forms, insurance details, appointment prep, and answers to common questions — all in one simple place.</p>
+        <div class="patient-hero-actions">
+          <a href="#forms" class="btn btn-primary"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M14 2v6h6M16 13H8M16 17H8M10 9H8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg> New Patient Forms</a>
+          <a href="#insurance" class="btn btn-outline" style="color:white; border-color:white;"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg> Insurance Info</a>
+        </div>
+      </div>
+      <div class="hero-cards-grid">
+        <a href="#forms" class="resource-card">
+          <div class="rc-icon-wrap rc-icon-blue">
+            <svg viewBox="0 0 24 24" fill="none"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M14 2v6h6M16 13H8M16 17H8M10 9H8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+          </div>
+          <div class="rc-content">
+            <h3>New Patient Forms</h3>
+            <p>Complete necessary forms before your first visit.</p>
+          </div>
+          <div class="rc-arrow">›</div>
+        </a>
+        <a href="#prep" class="resource-card">
+          <div class="rc-icon-wrap rc-icon-green">
+            <svg viewBox="0 0 24 24" fill="none"><rect x="3" y="4" width="18" height="18" rx="2" ry="2" stroke="currentColor" stroke-width="2"/><line x1="16" y1="2" x2="16" y2="6" stroke="currentColor" stroke-width="2"/><line x1="8" y1="2" x2="8" y2="6" stroke="currentColor" stroke-width="2"/><line x1="3" y1="10" x2="21" y2="10" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="15" r="2" fill="currentColor"/></svg>
+          </div>
+          <div class="rc-content">
+            <h3>Before Your Visit</h3>
+            <p>Helpful tips to prepare for your child's appointment.</p>
+          </div>
+          <div class="rc-arrow">›</div>
+        </a>
+        <a href="#insurance" class="resource-card">
+          <div class="rc-icon-wrap rc-icon-purple">
+            <svg viewBox="0 0 24 24" fill="none"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M9 12l2 2 4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <div class="rc-content">
+            <h3>Insurance &amp; Billing</h3>
+            <p>Insurance details, billing information, and policies.</p>
+          </div>
+          <div class="rc-arrow">›</div>
+        </a>
+        <a href="#faq" class="resource-card">
+          <div class="rc-icon-wrap rc-icon-orange">
+            <svg viewBox="0 0 24 24" fill="none"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><line x1="12" y1="17" x2="12.01" y2="17" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <div class="rc-content">
+            <h3>Parent FAQs</h3>
+            <p>Answers to the most common questions from parents.</p>
+          </div>
+          <div class="rc-arrow">›</div>
+        </a>
+      </div>
     </div>
   </section>
 
   <!-- ===== RESOURCES ===== -->
-  <section class="resources-section section" style="background: #FFFFFF url('images/backgrounds/bg-clouds-white.png') no-repeat center / cover;">
+  <section class="resources-section">
     <div class="container">
-      <div class="section-header">
-        <span class="section-tag">Patient Resources</span>
-        <h2>Get Started With Our Practice</h2>
+      <div class="section-header" style="text-align: center;">
+        <span class="section-tag" style="background:#E0F2FE; color:#0284C7; border:none; margin:0 auto 16px;">Patient Resources</span>
+        <h2>Get Started With Our Resources</h2>
+        <p>Everything you need for a smooth and stress-free experience.</p>
       </div>
-      <div class="resources-grid">
-        <a href="#" class="resource-card" id="forms" onclick="return false;">
-          <div class="resource-icon"><svg width="32" height="32" viewBox="0 0 24 24" fill="none"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" stroke="#1B4F8A" stroke-width="1.5" stroke-linejoin="round"/><path d="M14 2v6h6M16 13H8M16 17H8M10 9H8" stroke="#1B4F8A" stroke-width="1.5" stroke-linecap="round"/></svg></div>
-          <h3>New Patient Forms</h3>
-          <p>Download and complete your paperwork before your first visit to save time at check-in.</p>
-          <span class="resource-link">Download Forms →</span>
+      
+      <div class="resources-grid-4">
+        <a href="#forms" class="resource-card">
+          <div class="rc-icon-wrap rc-icon-blue">
+            <svg viewBox="0 0 24 24" fill="none"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><circle cx="12" cy="7" r="4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <div class="rc-content">
+            <h3>New Patient Forms</h3>
+            <p>Access and complete patient forms online.</p>
+          </div>
+          <div class="rc-arrow">›</div>
         </a>
-        <a href="#" class="resource-card" id="portal" onclick="return false;">
-          <div class="resource-icon"><svg width="32" height="32" viewBox="0 0 24 24" fill="none"><rect x="2" y="2" width="20" height="20" rx="5" stroke="#1B4F8A" stroke-width="1.5"/><path d="M8 12h8M12 8v8" stroke="#1B4F8A" stroke-width="1.5" stroke-linecap="round"/></svg></div>
-          <h3>Patient Portal</h3>
-          <p>Access medical records, test results, vaccination history, and message our care team securely.</p>
-          <span class="resource-link">Access Portal →</span>
+        <a href="#insurance" class="resource-card">
+          <div class="rc-icon-wrap rc-icon-green">
+            <svg viewBox="0 0 24 24" fill="none"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <div class="rc-content">
+            <h3>Insurance Info</h3>
+            <p>View accepted insurance plans and policies.</p>
+          </div>
+          <div class="rc-arrow">›</div>
         </a>
-        <a href="#" class="resource-card" id="vaccines" onclick="return false;">
-          <div class="resource-icon"><svg width="32" height="32" viewBox="0 0 24 24" fill="none"><path d="M19 3l-6 6-2-2-7 7 2 2 5-5 2 2 8-8-2-2z" stroke="#1B4F8A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-          <h3>Vaccine Schedule</h3>
-          <p>View the recommended childhood immunization schedule from birth through 18 years.</p>
-          <span class="resource-link">View Schedule →</span>
+        <a href="#prep" class="resource-card">
+          <div class="rc-icon-wrap rc-icon-purple">
+            <svg viewBox="0 0 24 24" fill="none"><rect x="3" y="4" width="18" height="18" rx="2" ry="2" stroke="currentColor" stroke-width="2"/><line x1="16" y1="2" x2="16" y2="6" stroke="currentColor" stroke-width="2"/><line x1="8" y1="2" x2="8" y2="6" stroke="currentColor" stroke-width="2"/><line x1="3" y1="10" x2="21" y2="10" stroke="currentColor" stroke-width="2"/><line x1="8" y1="14" x2="16" y2="14" stroke="currentColor" stroke-width="2"/><line x1="8" y1="18" x2="16" y2="18" stroke="currentColor" stroke-width="2"/></svg>
+          </div>
+          <div class="rc-content">
+            <h3>Appointment Prep</h3>
+            <p>What to bring and how to prepare for your visit.</p>
+          </div>
+          <div class="rc-arrow">›</div>
         </a>
-        <a href="#" class="resource-card" id="after-hours" onclick="return false;">
-          <div class="resource-icon"><svg width="32" height="32" viewBox="0 0 24 24" fill="none"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.36 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.11 1.2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 21 18.18z" stroke="#1B4F8A" stroke-width="1.5"/></svg></div>
-          <h3>After-Hours Instructions</h3>
-          <p>Know when to call our nurse line, visit urgent care, or go directly to the emergency room.</p>
-          <span class="resource-link">Read Guidelines →</span>
+        <a href="contact.html" class="resource-card">
+          <div class="rc-icon-wrap rc-icon-orange">
+            <svg viewBox="0 0 24 24" fill="none"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M8 12h.01M12 12h.01M16 12h.01" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <div class="rc-content">
+            <h3>Contact &amp; Hours</h3>
+            <p>Our hours, locations, and how to reach us.</p>
+          </div>
+          <div class="rc-arrow">›</div>
         </a>
       </div>
     </div>
