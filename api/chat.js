@@ -14,9 +14,10 @@ TWO LOCATIONS — both reached at (818) 205-1666:
 - ENCINO: 16661 Ventura Blvd, Suite 504, Encino, CA 91436
 
 HOURS & AVAILABILITY:
-- Walk-ins and scheduled appointments welcome at both locations
-- After-hours availability including weekends and holidays
-- Call (818) 205-1666 anytime — same number day, night, weekend, or holiday
+- Open Monday through Friday, 9:00 AM to 5:00 PM
+- Closed on Weekends and Holidays
+- Walk-ins welcome during normal business hours
+- Call (818) 205-1666 during office hours
 
 LANGUAGES:
 - Dr. Toomari speaks English, Spanish, and Farsi

@@ -76,7 +76,7 @@
           <a href="patient-info.html#forms">New Patient Forms</a>
           <a href="patient-info.html#portal">Patient Portal</a>
           <a href="patient-info.html#vaccines">Vaccine Schedule</a>
-          <a href="patient-info.html#after-hours">After-Hours Line</a>
+          <a href="patient-info.html#after-hours">Emergency Info</a>
           <a href="patient-info.html#insurance">Insurance &amp; Billing</a>
         </div>
         <div class="footer-col">
