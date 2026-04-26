@@ -835,8 +835,8 @@ p { color: var(--text-muted); line-height: 1.75; }
    ============================================================ */
 .page-banner {
   position: relative;
-  background: linear-gradient(135deg, #0d3260 0%, #1B4F8A 60%, #2563A8 100%);
-  padding: calc(var(--nav-height) + 80px) 0 80px;
+  background: #1B4F8A url('../images/backgrounds/blue-banner-bg.png') no-repeat center bottom / cover;
+  padding: calc(var(--nav-height) + 80px) 0 120px;
   text-align: center;
   color: white;
   overflow: hidden;
@@ -845,9 +845,7 @@ p { color: var(--text-muted); line-height: 1.75; }
   content: '';
   position: absolute;
   inset: 0;
-  background:
-    radial-gradient(circle at 20% 30%, rgba(245,130,31,0.15) 0%, transparent 40%),
-    radial-gradient(circle at 80% 70%, rgba(232,244,253,0.1) 0%, transparent 50%);
+  background: rgba(13, 50, 96, 0.25);
   pointer-events: none;
 }
 .page-banner .container { position: relative; z-index: 1; }
@@ -1315,7 +1313,7 @@ p { color: var(--text-muted); line-height: 1.75; }
   .footer-grid { grid-template-columns: 1fr; gap: 32px; }
   .footer-bottom-inner { flex-direction: column; text-align: center; }
 
-  .page-banner { padding: calc(var(--nav-height) + 56px) 0 56px; }
+  .page-banner { padding: calc(var(--nav-height) + 56px) 0 90px; }
   .form-row { grid-template-columns: 1fr; gap: 0; }
   .appointment-form { padding: 24px; }
   .emergency-card { flex-direction: column; gap: 16px; padding: 24px; }
