@@ -18,52 +18,87 @@
 
   <div id="site-header-mount"></div>
 
-  <!-- ===== PAGE BANNER ===== -->
-  <section class="page-banner">
+  <!-- ===== ABOUT HERO ===== -->
+  <section class="about-hero">
     <div class="container">
-      <span class="banner-tag">About Our Practice</span>
-      <h1>One Doctor. Every Patient. Since 2009.</h1>
-      <p>Dr. Tajav Toomari is the medical director and sole provider at both of our San Fernando Valley offices — personally seeing every patient himself.</p>
+      <div class="ah-left">
+        <span class="ah-tag">About Our Practice</span>
+        <h1>One Doctor.<br>Every Patient. Since 2009.</h1>
+        <p>Dr. Tajav Toomari is the medical director and sole provider at both of our San Fernando Valley offices — personally seeing every patient himself.</p>
+        
+        <div class="ah-features">
+          <div class="ah-feature-card">
+            <div class="ah-fc-icon">
+              <svg viewBox="0 0 24 24" fill="none"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><circle cx="12" cy="7" r="4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M12 11v2M10 13h4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+            </div>
+            <div class="ah-fc-content">
+              <h3>Experienced Care</h3>
+              <p>Board-certified in pediatrics with over a decade of dedicated service.</p>
+            </div>
+          </div>
+          <div class="ah-feature-card">
+            <div class="ah-fc-icon">
+              <svg viewBox="0 0 24 24" fill="none"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>
+            </div>
+            <div class="ah-fc-content">
+              <h3>Patient-Focused Approach</h3>
+              <p>Compassionate, personalized care for children from newborns to teens.</p>
+            </div>
+          </div>
+          <div class="ah-feature-card">
+            <div class="ah-fc-icon">
+              <svg viewBox="0 0 24 24" fill="none"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><circle cx="9" cy="7" r="4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M23 21v-2a4 4 0 0 0-3-3.87" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M16 3.13a4 4 0 0 1 0 7.75" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+            <div class="ah-fc-content">
+              <h3>Bilingual Team</h3>
+              <p>We speak English, Spanish, and Farsi to better serve our community.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="ah-right">
+        <div class="ah-image-wrap">
+          <div class="ah-image-blob"></div>
+          <img src="images/dr-toomari.jpg" alt="Dr. Tajav Toomari, DO" class="ah-photo">
+          <div class="ah-trust-card">
+            <div class="ah-trust-icon">
+              <svg viewBox="0 0 24 24" fill="none"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M9 12l2 2 4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+            <div class="ah-trust-text">
+              <h4>Board-Certified Pediatrician</h4>
+              <p>Committed to excellence in children's health.</p>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 
-  <!-- ===== ABOUT MAIN ===== -->
-  <section class="about-section section" style="background:white;">
-    <div class="container about-grid">
-      <div class="about-image-wrap">
-        <img src="images/dr-toomari.jpg" alt="Dr. Tajav Toomari, DO" class="about-photo">
-        <div class="about-badge">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="#F5821F"><path d="M12 2l2.09 6.26L20.6 9.17l-5.28 4.77 1.64 7.06L12 17.27l-4.96 3.73 1.64-7.06L3.4 9.17l6.51-.91L12 2z"/></svg>
-          Board-Certified Pediatrician
+  <!-- ===== CREDENTIALS (Moved below hero) ===== -->
+  <section class="section" style="background:white; padding: 60px 0 20px;">
+    <div class="container" style="max-width: 800px; margin: 0 auto; text-align: center;">
+      <h2 style="margin-bottom: 32px; font-size: 1.5rem; color: var(--blue-dark);">Credentials &amp; Training</h2>
+      <div class="credentials" style="display: grid; grid-template-columns: 1fr; gap: 16px; text-align: left; background: #F9FAFB; padding: 32px; border-radius: 16px; border: 1px solid var(--border);">
+        <div class="credential">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" stroke="#1B4F8A" stroke-width="2" stroke-linecap="round"/><path d="M22 4L12 14.01l-3-3" stroke="#1B4F8A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          BS in Neuroscience — UCLA
         </div>
-      </div>
-      <div class="about-content">
-        <span class="section-tag">Meet the Doctor</span>
-        <h2>Dr. Tajav Toomari, DO</h2>
-        <p class="about-lead">Dr. Tajav Toomari founded his practice in 2009 after completing his pediatric training at USC. Board-certified in pediatrics, Dr. Toomari is the medical director and sole provider at both locations — personally seeing every patient himself.</p>
-        <p>His mission is simple: equal access to excellent medical care for every family in the San Fernando Valley, from newborns to teenagers, regardless of background or insurance.</p>
-        <p>Dr. Toomari speaks English, Spanish, and Farsi. Both offices are staffed by experienced, friendly, bilingual professionals.</p>
-        <div class="credentials">
-          <div class="credential">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" stroke="#1B4F8A" stroke-width="2" stroke-linecap="round"/><path d="M22 4L12 14.01l-3-3" stroke="#1B4F8A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            BS in Neuroscience — UCLA
-          </div>
-          <div class="credential">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" stroke="#1B4F8A" stroke-width="2" stroke-linecap="round"/><path d="M22 4L12 14.01l-3-3" stroke="#1B4F8A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            DO — Western University of Health Sciences (2002–2006)
-          </div>
-          <div class="credential">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" stroke="#1B4F8A" stroke-width="2" stroke-linecap="round"/><path d="M22 4L12 14.01l-3-3" stroke="#1B4F8A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            Pediatric Residency — University of Southern California (2006–2009)
-          </div>
-          <div class="credential">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" stroke="#1B4F8A" stroke-width="2" stroke-linecap="round"/><path d="M22 4L12 14.01l-3-3" stroke="#1B4F8A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            Board-Certified in Pediatrics
-          </div>
-          <div class="credential">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" stroke="#1B4F8A" stroke-width="2" stroke-linecap="round"/><path d="M22 4L12 14.01l-3-3" stroke="#1B4F8A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            Founded Tajav Toomari DO Inc in 2009
-          </div>
+        <div class="credential">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" stroke="#1B4F8A" stroke-width="2" stroke-linecap="round"/><path d="M22 4L12 14.01l-3-3" stroke="#1B4F8A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          DO — Western University of Health Sciences (2002–2006)
+        </div>
+        <div class="credential">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" stroke="#1B4F8A" stroke-width="2" stroke-linecap="round"/><path d="M22 4L12 14.01l-3-3" stroke="#1B4F8A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          Pediatric Residency — University of Southern California (2006–2009)
+        </div>
+        <div class="credential">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" stroke="#1B4F8A" stroke-width="2" stroke-linecap="round"/><path d="M22 4L12 14.01l-3-3" stroke="#1B4F8A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          Board-Certified in Pediatrics
+        </div>
+        <div class="credential">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" stroke="#1B4F8A" stroke-width="2" stroke-linecap="round"/><path d="M22 4L12 14.01l-3-3" stroke="#1B4F8A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          Founded Tajav Toomari DO Inc in 2009
         </div>
       </div>
     </div>
