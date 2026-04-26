@@ -1268,17 +1268,10 @@ p { color: var(--text-muted); line-height: 1.75; }
    ============================================================ */
 .patient-hero {
   position: relative;
-  background: #1B4F8A url('../images/backgrounds/background2.png') no-repeat center bottom / cover;
+  background: #E8F4FD url('../images/backgrounds/background2.png') no-repeat center bottom / cover;
   padding: calc(var(--nav-height) + 80px) 0 160px;
-  color: white;
+  color: var(--text);
   overflow: hidden;
-}
-.patient-hero::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: rgba(13, 50, 96, 0.25);
-  pointer-events: none;
 }
 .patient-hero .container {
   position: relative;
@@ -1291,10 +1284,10 @@ p { color: var(--text-muted); line-height: 1.75; }
 .patient-hero-content { max-width: 540px; }
 .patient-hero-tag {
   display: inline-block;
-  background: rgba(255,255,255,0.15);
-  border: 1px solid rgba(255,255,255,0.25);
-  backdrop-filter: blur(8px);
-  color: white;
+  background: white;
+  border: 1px solid #E5E7EB;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+  color: var(--blue-dark);
   font-family: var(--font-head);
   font-weight: 700;
   font-size: 0.78rem;
@@ -1308,11 +1301,11 @@ p { color: var(--text-muted); line-height: 1.75; }
   font-size: clamp(2.5rem, 4vw, 3.5rem);
   line-height: 1.15;
   margin-bottom: 20px;
-  color: white;
+  color: var(--blue-dark);
 }
 .patient-hero p {
   font-size: 1.1rem;
-  color: rgba(255,255,255,0.85);
+  color: var(--text);
   margin-bottom: 32px;
   line-height: 1.6;
 }
@@ -1421,9 +1414,9 @@ p { color: var(--text-muted); line-height: 1.75; }
    ============================================================ */
 .about-hero {
   position: relative;
-  background: #0B72D9 url('../images/backgrounds/background2.png') no-repeat center bottom / cover;
+  background: #E8F4FD url('../images/backgrounds/background2.png') no-repeat center bottom / cover;
   padding: calc(var(--nav-height) + 80px) 0 160px;
-  color: white;
+  color: var(--text);
   overflow: hidden;
 }
 .about-hero .container {
@@ -1438,6 +1431,8 @@ p { color: var(--text-muted); line-height: 1.75; }
 .ah-tag {
   display: inline-block;
   background: white;
+  border: 1px solid #E5E7EB;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.05);
   color: var(--blue-dark);
   font-family: var(--font-head);
   font-weight: 700;
@@ -1452,7 +1447,7 @@ p { color: var(--text-muted); line-height: 1.75; }
   font-size: clamp(2.5rem, 4vw, 3.5rem);
   line-height: 1.15;
   margin-bottom: 24px;
-  color: white;
+  color: var(--blue-dark);
   position: relative;
   padding-bottom: 24px;
 }
@@ -1468,7 +1463,7 @@ p { color: var(--text-muted); line-height: 1.75; }
 }
 .ah-left p {
   font-size: 1.15rem;
-  color: rgba(255,255,255,0.95);
+  color: var(--text);
   margin-bottom: 40px;
   line-height: 1.6;
 }
@@ -1527,20 +1522,20 @@ p { color: var(--text-muted); line-height: 1.75; }
 .ah-image-blob {
   position: absolute;
   inset: -15px;
-  background: rgba(232,244,253,0.15);
-  border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+  background: rgba(2, 132, 199, 0.1);
+  border-radius: 16px;
   z-index: 0;
-  transform: rotate(-5deg);
+  transform: rotate(-3deg);
 }
 .ah-photo {
   width: 100%;
   height: auto;
-  border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+  border-radius: 16px;
   position: relative;
   z-index: 1;
-  box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.15);
   object-fit: cover;
-  aspect-ratio: 1;
+  aspect-ratio: 3/4;
 }
 .ah-trust-card {
   position: absolute;
