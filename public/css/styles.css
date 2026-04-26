@@ -876,6 +876,45 @@ p { color: var(--text-muted); line-height: 1.75; }
   font-size: 1.05rem;
 }
 
+/* ============================================================
+   CONTACT HERO
+   ============================================================ */
+.contact-hero {
+  position: relative;
+  background: #E8F4FD url('../images/backgrounds/background2.png') no-repeat center bottom / cover;
+  padding: calc(var(--nav-height) + 80px) 0 160px;
+  text-align: center;
+  color: var(--text);
+  overflow: hidden;
+}
+.contact-hero .banner-tag {
+  display: inline-block;
+  background: white;
+  color: var(--blue);
+  font-family: var(--font-head);
+  font-weight: 700;
+  font-size: 0.78rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 6px 14px;
+  border-radius: 100px;
+  margin-bottom: 16px;
+  box-shadow: 0 4px 12px rgba(27, 79, 138, 0.08);
+}
+.contact-hero h1 {
+  color: var(--blue);
+  margin-bottom: 16px;
+  font-size: clamp(2rem, 4.5vw, 3.5rem);
+  line-height: 1.15;
+}
+.contact-hero p {
+  color: var(--text);
+  max-width: 680px;
+  margin: 0 auto;
+  font-size: 1.15rem;
+  opacity: 0.9;
+}
+
 
 /* ============================================================
    SECTION CTA (centered button under section)
