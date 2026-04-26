@@ -1577,6 +1577,130 @@ p { color: var(--text-muted); line-height: 1.75; }
 
 
 /* ============================================================
+   SERVICES HERO DISTINCT
+   ============================================================ */
+.services-hero-distinct {
+  position: relative;
+  background: linear-gradient(135deg, #E8F4FD 0%, #FFFFFF 100%);
+  padding: calc(var(--nav-height) + 80px) 0 240px;
+  color: var(--text);
+  text-align: center;
+  overflow: hidden;
+}
+.sh-shape {
+  position: absolute;
+  border-radius: 50%;
+  background: rgba(27, 79, 138, 0.03);
+  z-index: 0;
+}
+.sh-shape-1 { width: 300px; height: 300px; top: -50px; left: -100px; }
+.sh-shape-2 { width: 400px; height: 400px; bottom: 50px; right: -150px; background: rgba(245, 130, 31, 0.03); }
+
+.services-hero-distinct .container {
+  position: relative;
+  z-index: 1;
+  max-width: 800px;
+  margin: 0 auto;
+}
+.sh-tag {
+  display: inline-block;
+  background: white;
+  border: 1px solid #E5E7EB;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+  color: var(--blue-dark);
+  font-family: var(--font-head);
+  font-weight: 700;
+  font-size: 0.8rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 8px 18px;
+  border-radius: 100px;
+  margin-bottom: 24px;
+}
+.services-hero-distinct h1 {
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  line-height: 1.15;
+  margin-bottom: 24px;
+  color: var(--blue-dark);
+}
+.services-hero-distinct p {
+  font-size: 1.25rem;
+  color: var(--text);
+  margin-bottom: 0;
+  line-height: 1.6;
+}
+
+.hero-wave-bottom {
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  z-index: 2;
+}
+.hero-wave-bottom svg {
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 120px;
+}
+.hero-wave-bottom path { fill: #ffffff; }
+
+/* Overlapping Cards Container */
+.sh-overlap-container {
+  max-width: 1100px;
+  margin: -140px auto 60px;
+  position: relative;
+  z-index: 10;
+  padding: 0 20px;
+}
+.sh-overlap-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+.sh-overlap-card {
+  background: white;
+  border-radius: 20px;
+  padding: 32px 24px;
+  text-align: center;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.08);
+  text-decoration: none;
+  color: var(--text);
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.sh-overlap-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 50px rgba(0,0,0,0.12);
+}
+.sh-oc-icon {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+.sh-oc-icon svg { width: 32px; height: 32px; }
+.sh-overlap-card h3 {
+  font-size: 1.2rem;
+  color: var(--blue-dark);
+  margin-bottom: 12px;
+}
+.sh-overlap-card p {
+  font-size: 0.95rem;
+  color: var(--text-light);
+  line-height: 1.5;
+  margin: 0;
+}
+
+
+/* ============================================================
    RESPONSIVE
    ============================================================ */
 @media (max-width: 1024px) {
@@ -1609,6 +1733,8 @@ p { color: var(--text-muted); line-height: 1.75; }
   .ah-left              { margin: 0 auto; }
   .ah-left h1::after    { margin: 0 auto; left: 0; right: 0; }
   .ah-image-wrap        { max-width: 400px; margin: 0 auto; }
+  .sh-overlap-container { margin-top: -100px; }
+  .sh-overlap-grid      { grid-template-columns: 1fr; gap: 16px; }
 }
 
 @media (max-width: 768px) {
