@@ -1268,7 +1268,7 @@ p { color: var(--text-muted); line-height: 1.75; }
    ============================================================ */
 .patient-hero {
   position: relative;
-  background: #1B4F8A url('../images/backgrounds/blue-banner-bg.png') no-repeat center bottom / cover;
+  background: #1B4F8A url('../images/backgrounds/background2.png') no-repeat center bottom / cover;
   padding: calc(var(--nav-height) + 80px) 0 160px;
   color: white;
   overflow: hidden;
@@ -1421,7 +1421,7 @@ p { color: var(--text-muted); line-height: 1.75; }
    ============================================================ */
 .about-hero {
   position: relative;
-  background: #0B72D9 url('../images/backgrounds/about-hero-bg.png') no-repeat center bottom / cover;
+  background: #0B72D9 url('../images/backgrounds/background2.png') no-repeat center bottom / cover;
   padding: calc(var(--nav-height) + 80px) 0 160px;
   color: white;
   overflow: hidden;
