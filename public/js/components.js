@@ -135,15 +135,10 @@
           </div>
         </div>
         <div class="quick-replies" id="quickReplies">
-          <button class="quick-reply" data-msg="Office hours">Office hours</button>
-          <button class="quick-reply" data-msg="Location">Location</button>
-          <button class="quick-reply" data-msg="Insurance">Insurance</button>
-          <button class="quick-reply" data-msg="New patient info">New patient info</button>
-          <button class="quick-reply" data-msg="Request appointment">Request appointment</button>
-          <button class="quick-reply" data-msg="Forms / records">Forms / records</button>
-          <button class="quick-reply" data-msg="Refill process">Refill process</button>
-          <button class="quick-reply" data-msg="After-hours policy">After-hours policy</button>
-          <button class="quick-reply" data-msg="Call the office">Call the office</button>
+          <button class="quick-reply" data-msg="Request appointment">📅 Book Appointment</button>
+          <button class="quick-reply" data-msg="Office hours and location">📍 Hours &amp; Location</button>
+          <button class="quick-reply" data-msg="Insurance accepted">🏥 Insurance</button>
+          <button class="quick-reply" data-msg="New patient info">👶 New Patient</button>
         </div>
         <div class="widget-input-area">
           <input type="text" class="widget-input" id="widgetInput" placeholder="Type a message..." autocomplete="off" aria-label="Message">
