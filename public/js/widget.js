@@ -213,12 +213,25 @@
             <option>Other</option>
           </select>
           
+          <label>Preferred Date *</label>
+          <input type="date" required autocomplete="off">
+
           <label>Preferred Location *</label>
           <select required>
             <option value="">Select...</option>
             <option>Van Nuys</option>
             <option>Encino</option>
             <option>Either</option>
+          </select>
+          
+          <label>Insurance *</label>
+          <select required>
+            <option value="">Select...</option>
+            <option>Medi-Cal</option>
+            <option>HMO</option>
+            <option>PPO</option>
+            <option>Cash / Self-Pay</option>
+            <option>Other</option>
           </select>
           
           <button type="submit" class="btn btn-primary">Submit Request</button>

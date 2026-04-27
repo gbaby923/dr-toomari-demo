@@ -125,12 +125,20 @@
         </div>
         <div class="form-row">
           <div class="form-field">
-            <label for="childName">Child's Name *</label>
-            <input type="text" id="childName" name="childName" required>
+            <label for="visitType">What type of visit would you like to request? *</label>
+            <select id="visitType" name="visitType" required>
+              <option value="">Select a reason...</option>
+              <option>Well-child visit</option>
+              <option>Sick visit</option>
+              <option>Vaccine visit</option>
+              <option>Follow-up</option>
+              <option>Forms/school physical</option>
+              <option>Other</option>
+            </select>
           </div>
           <div class="form-field">
-            <label for="childDob">Child's Date of Birth *</label>
-            <input type="date" id="childDob" name="childDob" required>
+            <label for="preferredDate">Preferred Date *</label>
+            <input type="date" id="preferredDate" name="preferredDate" required>
           </div>
         </div>
         <div class="form-field">
@@ -148,24 +156,16 @@
             </select>
           </div>
           <div class="form-field">
-            <label for="visitType">Reason for Visit *</label>
-            <select id="visitType" name="visitType" required>
-              <option value="">Select a reason...</option>
-              <option>Well-Child Visit / Checkup</option>
-              <option>Sick Visit</option>
-              <option>Vaccinations</option>
-              <option>Newborn Care</option>
-              <option>Sports Physical</option>
-              <option>Behavioral / Mental Health</option>
-              <option>Telehealth Visit</option>
-              <option>New Patient Visit</option>
+            <label for="insurance">Insurance *</label>
+            <select id="insurance" name="insurance" required>
+              <option value="">Select...</option>
+              <option>Medi-Cal</option>
+              <option>HMO</option>
+              <option>PPO</option>
+              <option>Cash / Self-Pay</option>
               <option>Other</option>
             </select>
           </div>
-        </div>
-        <div class="form-field">
-          <label for="preferredTime">Preferred Day &amp; Time</label>
-          <input type="text" id="preferredTime" name="preferredTime" placeholder="e.g., Tuesday morning, or 'next week'">
         </div>
         <div class="form-field">
           <label for="notes">Additional Notes (optional)</label>
