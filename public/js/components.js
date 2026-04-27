@@ -107,7 +107,7 @@
       </div>
       <button class="widget-bubble" id="widgetBubble" aria-label="Chat with Maya">
         <svg class="bubble-icon-msg" width="28" height="28" viewBox="0 0 24 24" fill="none"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v10z" fill="white"/></svg>
-        <svg class="bubble-icon-close" width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M18 6L6 18M6 6l12 12" stroke="#1B4F8A" stroke-width="2.5" stroke-linecap="round"/></svg>
+        <svg class="bubble-icon-close" width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M18 6L6 18M6 6l12 12" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
       </button>
       
       <div class="widget-panel" id="widgetPanel" aria-hidden="true">
