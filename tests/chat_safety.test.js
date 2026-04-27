@@ -82,6 +82,12 @@ function runTests() {
     null
   );
 
+  runTest(
+    'Allowed: Sick Visit Walk-in',
+    'Can I do a sick day walk in?',
+    null
+  );
+
   console.log(`\nTests Completed: ${passed} Passed, ${failed} Failed`);
   if (failed > 0) process.exit(1);
 }

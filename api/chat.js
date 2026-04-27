@@ -17,7 +17,8 @@ ALLOWED TOPICS:
 - Insurance plans accepted
 - New patient information
 - Appointment request instructions
-- Well-child visit scheduling information
+- Well-child and sick visit scheduling information
+- Walk-in policies for sick visits
 - School forms, sports physical forms, vaccine record requests
 - Prescription refill process only (not refill approval or medication advice)
 - Patient portal instructions
@@ -59,7 +60,7 @@ const RESPONSES = {
 const KEYWORDS = {
   EMERGENCY: ['emergency', 'help now', 'dying', 'not breathing', 'trouble breathing', 'can’t breathe', "can't breathe", 'blue lips', 'seizure', 'unconscious', 'unresponsive', 'overdose', 'poison', 'swallowed pills', 'too much medication', 'gave too much', 'call 911'],
   MEDICATION: ['tylenol', 'acetaminophen', 'motrin', 'ibuprofen', 'advil', 'benadryl', 'zyrtec', 'antibiotic', 'inhaler', 'dose', 'dosage', 'mg', 'ml', 'teaspoon', 'how much medicine', 'how often can i give'],
-  MEDICAL: ['fever', 'rash', 'cough', 'vomiting', 'diarrhea', 'pain', 'headache', 'ear infection', 'sore throat', 'breathing', 'wheezing', 'bleeding', 'allergic reaction', 'sick', 'symptoms', 'should i go to the er', 'can this wait', 'is this serious', 'what should i do', 'is this normal'],
+  MEDICAL: ['fever', 'rash', 'cough', 'vomiting', 'diarrhea', 'pain', 'headache', 'ear infection', 'sore throat', 'breathing', 'wheezing', 'bleeding', 'allergic reaction', 'symptoms', 'should i go to the er', 'can this wait', 'is this serious', 'what should i do', 'is this normal'],
   LEGAL: ['lawyer', 'attorney', 'lawsuit', 'sue', 'malpractice', 'court', 'jail', 'killed', 'died', 'death', 'fault', 'blame', 'manslaughter', 'negligence']
 };
 
