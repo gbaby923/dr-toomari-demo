@@ -100,14 +100,16 @@
   // ---- CHAT WIDGET ----
   const widgetHTML = `
     <div id="chat-widget">
+      <div class="widget-floating-menu" id="widgetFloatingMenu">
+        <button class="floating-prompt" data-msg="Schedule Appointment">Schedule Appointment</button>
+        <button class="floating-prompt" data-msg="Info?">Info?</button>
+        <button class="floating-prompt" data-msg="First visit Questions?">First visit Questions?</button>
+      </div>
       <button class="widget-bubble" id="widgetBubble" aria-label="Chat with Maya">
-        <img src="images/maya-icon.png" srcset="images/maya-icon.png 1x, images/maya-icon@2x.png 2x" alt="Maya" class="maya-icon">
+        <svg class="bubble-icon-msg" width="28" height="28" viewBox="0 0 24 24" fill="none"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v10z" fill="white"/></svg>
         <svg class="bubble-icon-close" width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M18 6L6 18M6 6l12 12" stroke="#1B4F8A" stroke-width="2.5" stroke-linecap="round"/></svg>
       </button>
-      <div class="widget-tooltip" id="widgetTooltip" role="status" aria-live="polite">
-        <button class="tooltip-close" id="tooltipClose" aria-label="Dismiss">&times;</button>
-        <span class="tooltip-text">👋 Hi! Can I help with anything?</span>
-      </div>
+      
       <div class="widget-panel" id="widgetPanel" aria-hidden="true">
         <div class="widget-header">
           <div class="widget-header-info">
@@ -127,17 +129,21 @@
         <div class="widget-messages" id="widgetMessages">
           <div class="msg msg-bot">
             <div class="msg-bubble">
-              Hi! I'm Maya, the virtual receptionist at Toomari Pediatrics. 👋<br><br>
-              How can I help you and your family today?
+              Hi, I’m Maya, the virtual front desk receptionist at Toomari Pediatrics.<br><br>
+              I can help with clinic hours, location, insurance, new patient questions, forms, records, refill process questions, and appointment request information. What can I help you with?
             </div>
           </div>
         </div>
         <div class="quick-replies" id="quickReplies">
-          <button class="quick-reply" data-msg="I'd like to book an appointment">📅 Book an Appointment</button>
-          <button class="quick-reply" data-msg="What are your office hours and location?">📍 Office Hours &amp; Location</button>
-          <button class="quick-reply" data-msg="What should I bring to my child's first appointment?">📋 What to Bring</button>
-          <button class="quick-reply" data-msg="I have questions about vaccinations">💉 Vaccination Questions</button>
-          <button class="quick-reply" data-msg="My child is sick — what should I do?">🤒 Sick Visit Info</button>
+          <button class="quick-reply" data-msg="Office hours">Office hours</button>
+          <button class="quick-reply" data-msg="Location">Location</button>
+          <button class="quick-reply" data-msg="Insurance">Insurance</button>
+          <button class="quick-reply" data-msg="New patient info">New patient info</button>
+          <button class="quick-reply" data-msg="Request appointment">Request appointment</button>
+          <button class="quick-reply" data-msg="Forms / records">Forms / records</button>
+          <button class="quick-reply" data-msg="Refill process">Refill process</button>
+          <button class="quick-reply" data-msg="After-hours policy">After-hours policy</button>
+          <button class="quick-reply" data-msg="Call the office">Call the office</button>
         </div>
         <div class="widget-input-area">
           <input type="text" class="widget-input" id="widgetInput" placeholder="Type a message..." autocomplete="off" aria-label="Message">
@@ -145,9 +151,12 @@
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M22 2L11 13M22 2L15 22l-4-9-9-4 20-7z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
           </button>
         </div>
-        <div class="widget-footer">
-          <span class="widget-disclaimer">Disclaimer: For general information only. Call 911 for emergencies. Please do not enter personal health information.</span>
-          <span>Powered by <a href="https://mountstudio.ai" target="_blank" rel="noopener">MOUNT Studio</a></span>
+        <div class="widget-footer" style="flex-direction: column; text-align: left; align-items: flex-start; max-height: 80px; overflow-y: auto; font-size: 0.65rem; padding: 12px; gap: 8px;">
+          <span class="widget-disclaimer" style="display:block; opacity: 0.8; line-height: 1.4;">
+            <strong>Hi, I’m Maya, the virtual front desk receptionist for Toomari Pediatrics.</strong> I can help with general clinic questions, office information, appointment request guidance, forms, records, refill process questions, and how to contact the office.<br><br>
+            I cannot provide medical advice, diagnosis, medication dosing, emergency guidance, or determine whether symptoms are urgent. Please do not enter detailed medical symptoms, medication information, photos, or private health information in this chat.<br><br>
+            If your child may be having a medical emergency, call 911 now. If you need medical advice, call the office directly or use the clinic’s official patient portal.
+          </span>
         </div>
       </div>
     </div>

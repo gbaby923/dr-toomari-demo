@@ -12,54 +12,36 @@
   const inputEl      = document.getElementById('widgetInput');
   const sendBtn      = document.getElementById('widgetSend');
   const quickReplies = document.getElementById('quickReplies');
-  const tooltip      = document.getElementById('widgetTooltip');
-  const tooltipClose = document.getElementById('tooltipClose');
+  const floatingMenu = document.getElementById('widgetFloatingMenu');
 
   let isOpen       = false;
   let isWaiting    = false;
   let conversationHistory = [];
-  let tooltipHideTimer = null;
 
 
-  /* ---- TOOLTIP / GREETING POPUP ---- */
-  function showTooltip() {
-    if (!tooltip || isOpen) return;
-    tooltip.classList.add('visible');
-    // Auto-hide after 8 seconds
-    tooltipHideTimer = setTimeout(hideTooltip, 8000);
-  }
-  function hideTooltip() {
-    if (!tooltip) return;
-    tooltip.classList.remove('visible');
-    if (tooltipHideTimer) {
-      clearTimeout(tooltipHideTimer);
-      tooltipHideTimer = null;
-    }
-  }
+  /* ---- FLOATING MENU ---- */
   // Show once per session, 2.5s after page load
   try {
-    if (!sessionStorage.getItem('mayaTooltipShown')) {
+    if (!sessionStorage.getItem('mayaMenuShown')) {
       setTimeout(function () {
-        showTooltip();
-        try { sessionStorage.setItem('mayaTooltipShown', '1'); } catch (e) {}
+        if (!isOpen && floatingMenu) floatingMenu.classList.remove('hidden');
+        try { sessionStorage.setItem('mayaMenuShown', '1'); } catch (e) {}
       }, 2500);
     }
   } catch (e) {
     // sessionStorage unavailable — show anyway
-    setTimeout(showTooltip, 2500);
+    setTimeout(function () {
+      if (!isOpen && floatingMenu) floatingMenu.classList.remove('hidden');
+    }, 2500);
   }
-  // Click tooltip body (not close button) opens widget
-  if (tooltip) {
-    tooltip.addEventListener('click', function (e) {
-      if (e.target.closest('.tooltip-close')) return;
-      hideTooltip();
-      openWidget();
-    });
-  }
-  if (tooltipClose) {
-    tooltipClose.addEventListener('click', function (e) {
-      e.stopPropagation();
-      hideTooltip();
+
+  if (floatingMenu) {
+    floatingMenu.querySelectorAll('.floating-prompt').forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        const msg = btn.getAttribute('data-msg');
+        openWidget();
+        sendMessage(msg);
+      });
     });
   }
 
@@ -67,7 +49,7 @@
   /* ---- OPEN / CLOSE ---- */
   function openWidget() {
     isOpen = true;
-    hideTooltip();
+    if (floatingMenu) floatingMenu.classList.add('hidden');
     panel.classList.add('open');
     panel.setAttribute('aria-hidden', 'false');
     bubble.classList.add('open');
@@ -220,13 +202,14 @@
           <label>Phone Number *</label>
           <input type="tel" required autocomplete="off">
           
-          <label>Reason for Visit *</label>
+          <label>What type of visit would you like to request? *</label>
           <select required>
             <option value="">Select...</option>
-            <option>Well-Child Checkup</option>
-            <option>Sick Visit</option>
-            <option>Vaccinations</option>
-            <option>New Patient Visit</option>
+            <option>Well-child visit</option>
+            <option>Sick visit</option>
+            <option>Vaccine visit</option>
+            <option>Follow-up</option>
+            <option>Forms/school physical</option>
             <option>Other</option>
           </select>
           
