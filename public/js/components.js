@@ -101,9 +101,10 @@
   const widgetHTML = `
     <div id="chat-widget">
       <div class="widget-floating-menu" id="widgetFloatingMenu">
-        <button class="floating-prompt" data-msg="Schedule Appointment">Schedule Appointment</button>
-        <button class="floating-prompt" data-msg="Info?">Info?</button>
-        <button class="floating-prompt" data-msg="First visit Questions?">First visit Questions?</button>
+        <button class="floating-prompt floating-prompt-accent" data-msg="I'd like a same-day sick visit today">⚡ Same-Day Visit</button>
+        <button class="floating-prompt" data-msg="Schedule Appointment">📅 Schedule Appointment</button>
+        <button class="floating-prompt" data-msg="What insurance do you accept?">🏥 Insurance Info</button>
+        <button class="floating-prompt" data-msg="First visit questions">👶 First Visit Questions</button>
       </div>
       <button class="widget-bubble" id="widgetBubble" aria-label="Chat with Maya">
         <svg class="bubble-icon-msg" width="28" height="28" viewBox="0 0 24 24" fill="none"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v10z" fill="white"/></svg>
@@ -114,27 +115,31 @@
         <div class="widget-header">
           <div class="widget-header-info">
             <div class="widget-avatar">M</div>
-            <div>
-              <div class="widget-title">Toomari Pediatrics</div>
+            <div class="widget-header-text">
+              <div class="widget-title">Maya · Toomari Pediatrics</div>
               <div class="widget-status">
-                <span class="status-dot"></span>
-                Maya is online
+                <span class="status-dot" id="widgetStatusDot"></span>
+                <span id="widgetStatusText">Open now · Maya is online</span>
               </div>
             </div>
           </div>
-          <button class="widget-close" id="widgetClose" aria-label="Close chat">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M18 6L6 18M6 6l12 12" stroke="white" stroke-width="2" stroke-linecap="round"/></svg>
-          </button>
+          <div class="widget-header-right">
+            <div class="widget-clock" id="widgetClock" aria-label="Current clinic time">--:--</div>
+            <button class="widget-close" id="widgetClose" aria-label="Close chat">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M18 6L6 18M6 6l12 12" stroke="white" stroke-width="2" stroke-linecap="round"/></svg>
+            </button>
+          </div>
         </div>
         <div class="widget-messages" id="widgetMessages">
           <div class="msg msg-bot">
             <div class="msg-bubble">
-              Hi, I’m Maya, the virtual front desk receptionist at Toomari Pediatrics.<br><br>
-              I can help with clinic hours, location, insurance, new patient questions, forms, records, refill process questions, and appointment request information. What can I help you with?
+              Hi, I'm <strong>Maya</strong> — the virtual front desk at Toomari Pediatrics. 💙<br><br>
+              I can help with hours, locations, insurance, new patient questions, forms, refill instructions, and booking — including <strong>same-day sick visits</strong>. How can I help your family today?
             </div>
           </div>
         </div>
         <div class="quick-replies" id="quickReplies">
+          <button class="quick-reply" data-msg="I'd like a same-day sick visit today">⚡ Same-Day Visit</button>
           <button class="quick-reply" data-msg="Request appointment">📅 Book Appointment</button>
           <button class="quick-reply" data-msg="Office hours and location">📍 Hours &amp; Location</button>
           <button class="quick-reply" data-msg="Insurance accepted">🏥 Insurance</button>
