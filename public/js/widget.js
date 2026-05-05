@@ -82,30 +82,11 @@
   const sendBtn      = document.getElementById('widgetSend');
   const quickReplies = document.getElementById('quickReplies');
   const floatingMenu = document.getElementById('widgetFloatingMenu');
-  const clockEl      = document.getElementById('widgetClock');
-  const statusTextEl = document.getElementById('widgetStatusText');
-  const statusDotEl  = document.getElementById('widgetStatusDot');
 
   let isOpen       = false;
   let isWaiting    = false;
   let conversationHistory = [];
 
-  /* ---- LIVE STATUS / CLOCK ---- */
-  function refreshStatusUI() {
-    const now = clinicNow();
-    const open = isClinicOpenAt(now);
-    if (clockEl) clockEl.textContent = fmtTime(now);
-    if (statusTextEl) {
-      statusTextEl.textContent = open
-        ? 'Open now · Maya is online'
-        : 'Closed · Reopens ' + fmtDate(nextOpeningAfter(now)) + ' 9:00 AM';
-    }
-    if (statusDotEl) {
-      statusDotEl.classList.toggle('status-dot-closed', !open);
-    }
-  }
-  refreshStatusUI();
-  setInterval(refreshStatusUI, 30 * 1000);
 
   /* ---- FLOATING MENU ---- */
   // Show once per session, 2.5s after page load
